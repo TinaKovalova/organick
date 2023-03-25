@@ -1,0 +1,142 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.footer {
+  width: 100%;
+  min-height: rem(492);
+  margin-top: rem(16);
+  @extend %main-text-style;
+  
+  &__container {
+    @include main-container();
+    min-height: rem(440);
+    display: flex;
+    gap: vw(92);
+    @include laptop(){
+        flex-wrap: wrap;
+    }
+    
+  }
+  .contacts {
+    flex: 0 1 vw(285);
+    min-width: rem(181);
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    align-items: flex-end;
+    &__title {
+      @extend %title-text-style;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: rem(35);
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+      direction: rtl;
+    }
+    &__item {
+    }
+    &__item-title {
+      font-weight: 700;
+    }
+  }
+
+  &__informer {
+    width: rem(543);
+    position: relative;
+  
+
+    &::before,
+    &::after {
+      content: "";
+      display: inline-block;
+      height: rem(336);
+      width: 1px;
+      position: absolute;
+      background-color:$dark-gray ;
+      top: 0;
+    }
+    &::before{
+        left: rem(-41);
+    }
+    &::after{
+        right: rem(-41);
+    }
+    .widgets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__description {
+        margin-top: rem(23);
+        padding: 0 rem(16);
+        text-align: center;
+      }
+    }
+    .social {
+      margin-top: rem(49);
+      display: flex;
+      justify-content: center;
+      gap: rem(15);
+
+      &__item {
+      }
+      &__link {
+        display: inline-block;
+        width: rem(60);
+        height: rem(60);
+        border-radius: 50%;
+      }
+      .instagram-link {
+        background: $light-green url("../../assets/footer/insta.svg") center
+          no-repeat;
+      }
+      .facebook-link {
+        background: $light-green url("../../assets/footer/fb.svg") center
+          no-repeat;
+      }
+      .twitter-link {
+        background: $light-green url("../../assets/footer/twiter.svg") center
+          no-repeat;
+      }
+      .pintrest-link {
+        background: $light-green url("../../assets/footer/pintrest.svg") center
+          no-repeat;
+      }
+    }
+  }
+
+  .utility {
+    flex: 0 1 vw(285);
+    min-width: rem(181);
+    &__title {
+      @extend %title-text-style;
+      font-weight: 700;
+      font-size: rem(30);
+      line-height: rem(35);
+    }
+    &__list {
+      margin-top: rem(22);
+      line-height: rem(49);
+    }
+    &__item {
+    }
+  }
+  &__copyright {
+    min-height: rem(47);
+    text-align: center;
+    .bold-text{
+        font-weight: 700;
+    }
+  }
+  @include laptop(){
+    &__container{
+     flex-wrap: wrap;
+    }
+    &__informer{
+        order: -1;
+    }
+
+  } 
+  
+}

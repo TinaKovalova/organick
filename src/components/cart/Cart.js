@@ -1,7 +1,5 @@
 import "./Cart.scss";
 import { Link } from "react-router-dom";
-import cart from '../../assets/cart-icon.svg';
-
 
 export function Cart() {
   return (

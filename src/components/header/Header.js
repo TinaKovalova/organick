@@ -6,13 +6,13 @@ import "./Header.scss";
 
 export function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <Logo />
       <Navigation className="header__navigation" />
       <div className="header__user-panel">
         <Search className="header__search-panel" />
         <Cart className="header__cart" />
       </div>
-    </div>
+    </header>
   );
 }

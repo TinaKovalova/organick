@@ -1,7 +1,6 @@
 @import '../../styles/variables', '../../styles/functions' ;
   .header{
     @extend %title-text-style;
-    color: $main-text-color;
     width: 100%;
     height:rem(204);
     padding: rem(75) rem(162);

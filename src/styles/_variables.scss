@@ -16,14 +16,13 @@ $light-green: #eff6f1;
 }
 %title-text-style {
   font-family: "Roboto", sans-serif;
+  color: $main-text-color;
 }
 %subtitle-text-style {
   font-family: "Yellowtail", cursive;
 }
 
-$breakpoint-desktop: size-rem(
-  $container-width
-); /*>=992 Desktop, large screens*/
+$breakpoint-desktop: size-rem($container-width); /*>=992 Desktop, large screens*/
 $breakpoint-laptop: size-rem(991.98); /*>=768 Small screens, laptop*/
 $breakpoint-tablet: size-rem(767.98); /*>=480 Ipads, Tablets*/
 $breakpoint-mobile: size-rem(479.98); /*<=480 mobile*/
