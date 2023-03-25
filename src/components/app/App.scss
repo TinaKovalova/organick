@@ -1,0 +1,12 @@
+@import '../../styles/variables', '../../styles/functions' ;
+.App{
+    min-height: 100vh;
+    padding-top:rem(204);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    .main{
+        width: 100%;
+        flex: 1 1 auto;
+    }
+}
