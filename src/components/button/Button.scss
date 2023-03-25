@@ -1,0 +1,19 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.btn{
+    width: rem(220);
+    min-height: rem(79);
+    border-radius: rem(16);
+    padding: rem(28) rem(39);
+    @extend %title-text-style;
+    &__icon{
+        margin-left: rem(10);
+    }
+}
+.bright .btn{
+    background-color: $yellow-btn;
+}
+.dark .btn{
+    background-color:$main-text-color;
+    color: #FFFFFF;
+}

@@ -1,0 +1,36 @@
+@import '../../styles/variables', '../../styles/functions' ;
+
+.presentation{
+    width: 100%;
+    min-height: rem(898);
+    display: flex;
+    align-items: center;
+    background-color:  #D3CBCF;
+    background:
+     url('../../assets/presentation/Background1.svg')100%/100% no-repeat,
+     url('../../assets/presentation/background.png') 100%/100% no-repeat ;
+
+    &__container{
+        @include main-container();
+        display: flex;
+        align-items: center;
+    }
+    &__content{
+       flex: 0 1 vw(530);
+    }
+    &__subtitle{
+        @extend %subtitle-text-style;
+        font-size: rem(36);
+        line-height: rem(49);
+        color: $subtitle-color;
+
+    }
+    &__title{
+        @extend  %title-text-style;
+        font-weight: 800;
+        font-size: rem(70);
+        line-height: rem(82);
+        margin-top: rem(8);
+        margin-bottom: rem(23);
+    }
+}
