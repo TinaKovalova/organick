@@ -1,4 +1,5 @@
 import { About } from "../../about/About";
+import { EcoFriendly } from "../../ecoFriendly/EcoFriendly";
 import { Offer } from "../../offer/Offer";
 import { Presentation } from "../../presentation/Presentation";
 import { Products } from "../../products/Products";
@@ -14,6 +15,7 @@ export function HomePage() {
       <About />
       <Products/>
       <Offer/>
+      <EcoFriendly/>
     </>
   );
 }

@@ -17,7 +17,7 @@ export function About() {
           <ul className="about__list">
             <li className="about__item vegan-food">
               <div className="about__item-content">
-                <p className="about__item-title">Organic Foods Only</p>
+                <h6 className="about__item-title">Organic Foods Only</h6>
                 <p className="about__item-text">
                   Simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum
@@ -26,7 +26,7 @@ export function About() {
             </li>
             <li className="about__item email-box">
               <div className="about__item-content">
-                <p className="about__item-title">Quality Standards</p>
+                <h6 className="about__item-title">Quality Standards</h6>
                 <p className="about__item-text">
                   Simply dummy text of the printing and typesetting industry.
                   Lorem Ipsum
