@@ -21,16 +21,26 @@
   min-height: 4.9375rem;
   border-radius: 1rem;
   padding: 1.75rem 2.4375rem;
+  font-weight: 700;
 }
 .btn__icon {
   margin-left: 0.625rem;
 }
+.gallery-card .btn {
+  width: 20rem;
+  min-height: 6rem;
+}
 
-.bright.btn {
+.bright-btn.btn {
   background-color: #EFD372;
 }
 
-.dark.btn {
+.dark-btn.btn {
   background-color: #274c5b;
   color: #FFFFFF;
+}
+
+.white-btn.btn {
+  background-color: #FFFFFF;
+  border-radius: 1.25rem;
 }

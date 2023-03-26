@@ -34,7 +34,7 @@ export function About() {
               </div>
             </li>
           </ul>
-          <Button className="dark" text="Shop Now" icon="true" />
+          <Button className="dark-btn" text="Shop Now" icon />
         </div>
       </div>
     </section>

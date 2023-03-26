@@ -8,7 +8,7 @@ export function ProductCard({
   category,
 }) {
   const cardStyle = {
-    backgroundImage: `url(${require(`../../assets/product/${imageName}`)})`,
+    backgroundImage: `url(${require(`../../assets/product/${imageName}`)})`
   };
   return (
     <div className="product" style={cardStyle}>

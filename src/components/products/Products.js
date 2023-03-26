@@ -66,7 +66,7 @@ export function Products() {
             category="Vegetable"
           />
         </div>
-        <Button className="dark" text="Load More" icon="true" />
+        <Button className="dark-btn" text="Load More" icon />
       </div>
     </section>
   );

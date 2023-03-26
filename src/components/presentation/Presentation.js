@@ -9,7 +9,7 @@ export function Presentation() {
           <p className="presentation__subtitle">100% Natural Food</p>
           <h1 className="presentation__title">
           Choose the best healthier way of life</h1>
-          <Button className="bright" text="Explore Now" icon="true" />
+          <Button className="bright-btn" text="Explore Now" icon />
         </div>
       </div>
     </section>
