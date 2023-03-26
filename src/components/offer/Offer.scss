@@ -1,0 +1,29 @@
+@import '../../styles/variables', '../../styles/functions' ;
+.offer{
+    width: 100%;
+    min-height: rem(1050);
+    background-color: $main-text-color;
+    padding: rem(201) rem(200)0 ;
+    &__container{
+        @include main-container();
+    }
+    &__subtitle{
+       @extend %subtitle-text-style;
+       font-size: rem(36);
+       line-height: rem(49);
+    }
+    &__title{
+        @extend %title-text-style ;
+        font-weight: 800;
+        font-size: rem(50);
+        line-height: rem(59);
+        color: #FFFFFF;
+        margin-top: rem(8);
+
+    }
+    &__content{
+        margin-top: rem(50);
+        display: flex;
+        gap: rem(20);
+    }
+}

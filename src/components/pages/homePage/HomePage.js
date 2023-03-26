@@ -1,4 +1,5 @@
 import { About } from "../../about/About";
+import { Offer } from "../../offer/Offer";
 import { Presentation } from "../../presentation/Presentation";
 import { Products } from "../../products/Products";
 
@@ -12,6 +13,7 @@ export function HomePage() {
       <Sale />
       <About />
       <Products/>
+      <Offer/>
     </>
   );
 }
