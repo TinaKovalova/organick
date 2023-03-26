@@ -4,7 +4,6 @@ import background1 from "../../assets/sale/bg1.png";
 import background2 from "../../assets/sale/bg2.png";
 
 export function Sale() {
-  console.log(background1);
   return (
     <section className="sale">
       <div className="sale__container">
