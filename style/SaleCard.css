@@ -1,0 +1,59 @@
+.sale-card__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.sale-card__subtitle {
+  font-family: "Yellowtail", cursive;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.sale-card__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.sale-card__subtitle {
+  font-family: "Yellowtail", cursive;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.sale-card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 35.5208333333vw;
+          flex: 0 1 35.5208333333vw;
+  min-width: 21.3125rem;
+  min-height: 22.9375rem;
+  padding: 3.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.875rem;
+  background-size: cover;
+}
+.sale-card__content {
+  width: 17.375rem;
+  padding-right: 1.125rem;
+}
+.sale-card__subtitle {
+  font-size: 2.25rem;
+  line-height: 3.0625rem;
+  color: #68a47f;
+}
+.sale-card__title {
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+}
+.bright .sale-card__subtitle, .bright .sale-card__title {
+  color: #ffffff;
+}
