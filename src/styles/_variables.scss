@@ -21,6 +21,7 @@ $yellow-btn:#EFD372;
 }
 %subtitle-text-style {
   font-family: "Yellowtail", cursive;
+  color: $subtitle-color;
 }
 
 $breakpoint-desktop: size-rem($container-width); /*>=992 Desktop, large screens*/

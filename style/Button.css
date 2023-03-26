@@ -26,11 +26,11 @@
   margin-left: 0.625rem;
 }
 
-.bright .btn {
+.bright.btn {
   background-color: #EFD372;
 }
 
-.dark .btn {
+.dark.btn {
   background-color: #274c5b;
   color: #FFFFFF;
 }

@@ -1,10 +1,10 @@
 import "./Button.scss";
 import arrow from '../../assets/arrow.png';
 
-export function Button(props) {
-  const { text, icon } = props;
+export function Button({text, icon, className}) {
+
   return (
-    <button className="btn">
+    <button className={`btn ${className}`}>
       {text}
       {icon ? <img src={arrow} className="btn__icon" alt="arrow"/> : null}
     </button>
