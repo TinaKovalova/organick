@@ -1,74 +1,63 @@
 @import "../../styles/variables", "../../styles/functions";
 
-.about{
-    width: 100%;
-    min-height: rem(1067);
-    background-color: $white-smoke;
-    background-image: url('../../assets/about/fruts.svg');
-    background-position: top rem(87) left rem(100);
-    background-repeat: no-repeat;
-    background-size: 48% 81%;
-    padding: rem(186) rem(199) 0;
-    &__container{
-        @include main-container();
-        display: flex;
-        justify-content: end;
-    }
-    &__content{
-        width: vw(702);
-        margin-top: rem(14);
-        @extend %main-text-style;
+.about {
+  width: 100%;
+  min-height: rem(1067);
+  background-color: $white-smoke;
+  background-image: url("../../assets/about/fruts.svg");
+  background-position: top rem(87) left rem(100);
+  background-repeat: no-repeat;
+  background-size: 48% 81%;
+  padding: rem(186) rem(199) 0;
+  &__container {
+    @include main-container();
+    display: flex;
+    justify-content: end;
+  }
+  &__content {
+    width: vw(702);
+    margin-top: rem(14);
+    @extend %main-text-style;
+  }
+  &__subtitle {
+    @extend %subtitle-text-style;
+    font-size: rem(36);
+    line-height: rem(49);
+  }
+  &__title {
+    @extend %title-text-style;
+    font-weight: 800;
+    font-size: rem(50);
+    line-height: rem(59);
+  }
 
-    }
-    &__subtitle{
-        @extend %subtitle-text-style;
-        font-size: rem(36);
-        line-height: rem(49);
-    }
-    &__title{
-        @extend %title-text-style;
-        font-weight: 800;
-        font-size: rem(50);
-        line-height: rem(59);
-    }
-    &__text{
+  &__list {
+    margin-top: rem(46);
+    margin-bottom: rem(46);
+  }
+  &__item {
+    list-style-position: inside;
+    width: rem(564);
 
+    &.vegan-food {
+      list-style-image: url("../../assets/about/veganFoodRect.svg");
     }
-    &__list{
-        margin-top: rem(46);
-        margin-bottom: rem(46);
-
+    &.email-box {
+      list-style-image: url("../../assets/about/mailboxQualityRect.svg");
     }
-    &__item{
-        list-style-position:inside;
-        width: rem(564);
-    
-
-        &.vegan-food{
-            list-style-image: url('../../assets/about/veganFoodRect.svg');
-        }
-        &.email-box{
-            list-style-image: url('../../assets/about/mailboxQualityRect.svg');
-        }
-
-    }
-    &__item-content{
-        display: inline-block;
-        vertical-align: top;
-        width: rem(444);
-    }
-    &__item-title{
-        @extend %title-text-style;
-        font-weight: 800;
-        font-size: rem(25);
-        line-height: rem(29);
-
-    }
-    &__item-text{
-        margin-top: rem(7);
-
-    }
-
-
-    
+  }
+  &__item-content {
+    display: inline-block;
+    vertical-align: top;
+    width: rem(444);
+  }
+  &__item-title {
+    @extend %title-text-style;
+    font-weight: 800;
+    font-size: rem(25);
+    line-height: rem(29);
+  }
+  &__item-text {
+    margin-top: rem(7);
+  }
 }
