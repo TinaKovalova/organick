@@ -20,7 +20,7 @@ export function ProductCard({
           <span className="product__price">${price}</span>
           <span className="product__discount-price">${price - discout}</span>
           <svg
-            id="raiting"
+            id="rating"
             width="84"
             height="19"
             viewBox="0 0 84 19"

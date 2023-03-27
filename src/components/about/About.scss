@@ -20,15 +20,10 @@
     @extend %main-text-style;
   }
   &__subtitle {
-    @extend %subtitle-text-style;
-    font-size: rem(36);
-    line-height: rem(49);
+    @include subtitleStyle();
   }
   &__title {
-    @extend %title-text-style;
-    font-weight: 800;
-    font-size: rem(50);
-    line-height: rem(59);
+    @include titleStyle();
   }
 
   &__list {

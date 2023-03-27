@@ -90,7 +90,7 @@
   color: #274c5b;
   text-decoration: none;
 }
-.product #raiting {
+.product #rating {
   margin-left: auto;
-  fill: gray;
+  fill: #FFA858;
 }

@@ -1,6 +1,6 @@
 $min-width: 320;
 $max-width: 1920;
-$max-width-Container: 1380;
+$max-width-Container: 1400;
 $container-padding: 10;
 $container-width: $max-width-Container + $container-padding * 2;
 
@@ -11,6 +11,7 @@ $dark-gray: #d4d4d4;
 $white-smoke: #f9f8f8;
 $light-green: #eff6f1;
 $yellow-btn:#EFD372;
+$star-color:#FFA858;
 
 %main-text-style {
   font-family: "Open Sans", sans-serif;

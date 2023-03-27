@@ -8,6 +8,7 @@ import { Sale } from "../../sale/Sale";
 import "./HomePage.scss";
 import { News } from "../../news/News";
 import { Subscribe } from "../../subscribe/Subscribe";
+import { Testimonial } from "../../testimonial/Testimonial";
 
 export function HomePage() {
   return (
@@ -16,6 +17,7 @@ export function HomePage() {
       <Sale />
       <About />
       <Products />
+      <Testimonial/>
       <Offer />
       <EcoFriendly />
       <Gallery />
