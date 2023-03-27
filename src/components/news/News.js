@@ -22,7 +22,7 @@ export function News() {
             imageName="salad.png"
           />
           <NewsCard
-            title="The Benefits of Vitamin D & How to Get It"
+            title="Our Favourite Summertime Tommeto"
             author="Rachi Card"
             text="Simply dummy text of the printing and typesetting industry. Lorem Ipsum"
             imageName="tomato.png"

@@ -89,6 +89,8 @@
 }
 .news-card__author-name {
   line-height: 1.3125rem;
+  margin-left: 0.5rem;
+  vertical-align: bottom;
 }
 .news-card__title {
   font-weight: 800;
