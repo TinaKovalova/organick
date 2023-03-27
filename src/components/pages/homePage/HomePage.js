@@ -7,6 +7,7 @@ import { Products } from "../../products/Products";
 import { Sale } from "../../sale/Sale";
 import "./HomePage.scss";
 import { News } from "../../news/News";
+import { Subscribe } from "../../subscribe/Subscribe";
 
 export function HomePage() {
   return (
@@ -19,6 +20,7 @@ export function HomePage() {
       <EcoFriendly />
       <Gallery />
       <News/>
+      <Subscribe/>
     </>
   );
 }

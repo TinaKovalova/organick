@@ -45,7 +45,7 @@
   padding: 11.625rem 12.4375rem 0;
 }
 .about__container {
-  width: 75vw;
+  width: 72.9166666667vw;
   padding: 0 0.625em;
   margin: 0 auto;
   display: -webkit-box;
@@ -53,7 +53,7 @@
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
 .about__content {
   width: 36.5625vw;

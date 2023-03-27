@@ -28,6 +28,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 20;
   gap: 6.7708333333vw;
   top: 0;
   left: 0;

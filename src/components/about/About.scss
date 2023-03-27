@@ -12,7 +12,7 @@
   &__container {
     @include main-container();
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
   &__content {
     width: vw(702);
