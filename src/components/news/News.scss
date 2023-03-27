@@ -1,0 +1,44 @@
+@import "../../styles/variables", "../../styles/functions";
+.news{
+    width: 100%;
+    min-height: rem(2125);
+    padding: rem(177) rem(253) 0;
+    &__container{
+        @include main-container();
+    }
+    &__headers{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+    }
+    &__titles-block{
+        width: rem(702);
+
+    }
+    &__subtitle{
+        @extend %subtitle-text-style;
+        font-size: rem(36);
+        line-height: rem(49);
+
+    }
+    &__title{
+        margin-top: rem(8);
+        @extend %title-text-style;
+        font-weight: 800;
+        font-size: rem(50);
+        line-height: rem(59);
+
+    }
+    .btn-border{
+        border-color:$main-text-color;
+    }
+    &__content{
+        margin-top: rem(48);
+        display: flex;
+        gap: rem(40);
+        justify-content: space-between;
+
+    }
+
+}

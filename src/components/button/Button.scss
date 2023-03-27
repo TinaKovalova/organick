@@ -5,6 +5,7 @@
     min-height: rem(79);
     border-radius: rem(16);
     padding: rem(28) rem(39);
+    border: rem(2) solid transparent ;
     font-weight: 700;
     @extend %title-text-style;
     &__icon{

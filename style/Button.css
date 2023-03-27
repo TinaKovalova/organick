@@ -21,6 +21,7 @@
   min-height: 4.9375rem;
   border-radius: 1rem;
   padding: 1.75rem 2.4375rem;
+  border: 0.125rem solid transparent;
   font-weight: 700;
 }
 .btn__icon {
