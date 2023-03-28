@@ -1,0 +1,57 @@
+.offer__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.offer__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.offer__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.offer__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.offer {
+  width: 100%;
+  min-height: 65.625rem;
+  background-color: #274c5b;
+  padding: 12.5625rem 12.5rem 0;
+}
+.offer__container {
+  width: 73.9583333333vw;
+  padding: 0 0.625em;
+  margin: 0 auto;
+}
+.offer__subtitle {
+  font-size: 2.25rem;
+  line-height: 3.0625rem;
+}
+.offer__title {
+  font-weight: 800;
+  font-size: 3.125rem;
+  line-height: 3.6875rem;
+  color: #FFFFFF;
+  margin-top: 0.5rem;
+}
+.offer__content {
+  margin-top: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+}

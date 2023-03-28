@@ -1,0 +1,98 @@
+.about__content {
+  font-family: "Open Sans", sans-serif;
+}
+
+.about__item-title, .about__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.about__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.about__content {
+  font-family: "Open Sans", sans-serif;
+}
+
+.about__item-title, .about__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.about__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.about {
+  width: 100%;
+  min-height: 66.6875rem;
+  background-color: #f9f8f8;
+  background-image: url("../../assets/about/fruts.svg");
+  background-position: top 5.4375rem left 6.25rem;
+  background-repeat: no-repeat;
+  background-size: 48% 81%;
+  padding: 11.625rem 12.4375rem 0;
+}
+.about__container {
+  width: 73.9583333333vw;
+  padding: 0 0.625em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.about__content {
+  width: 36.5625vw;
+  margin-top: 0.875rem;
+}
+.about__subtitle {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 3.0625rem;
+}
+.about__title {
+  font-size: 3.125rem;
+  font-weight: 800;
+  line-height: 3.6875rem;
+}
+.about__list {
+  margin-top: 2.875rem;
+  margin-bottom: 2.875rem;
+}
+.about__item {
+  list-style-position: inside;
+  width: 35.25rem;
+}
+.about__item.vegan-food {
+  list-style-image: url("../../assets/about/veganFoodRect.svg");
+}
+.about__item.email-box {
+  list-style-image: url("../../assets/about/mailboxQualityRect.svg");
+}
+.about__item-content {
+  display: inline-block;
+  vertical-align: top;
+  width: 27.75rem;
+}
+.about__item-title {
+  font-weight: 800;
+  font-size: 1.5625rem;
+  line-height: 1.8125rem;
+}
+.about__item-text {
+  margin-top: 0.4375rem;
+}

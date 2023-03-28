@@ -1,0 +1,10 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.gallery-card{
+    width: vw(612);
+    height: vw(583);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+}

@@ -1,0 +1,27 @@
+@import '../../styles/variables', '../../styles/functions' ;
+
+.header__logo{
+   
+}
+.logo{ 
+    width: rem(199);
+    height: rem(54);
+    display: flex;
+    gap: rem(8);
+    align-items: center;
+    &__img{
+       width: rem(37);
+       height: rem(54);
+       background-image: url('../../assets/header//logo.png');
+       background-size: 100% 100%;
+       display: inline-block;
+    }
+    &__text{
+        @extend %title-text-style;
+        color: $main-text-color;
+        font-weight: 700;
+        font-size: rem(38);
+        line-height:1em;
+
+    }
+}

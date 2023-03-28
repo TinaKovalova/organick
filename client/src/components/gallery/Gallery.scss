@@ -1,0 +1,13 @@
+@import "../../styles/variables", "../../styles/functions";
+.gallery{
+    width: 100%;
+    min-height: rem(957);
+    padding: rem(187) 0;
+    background-color: #F1F8F4;
+    &__container{
+        width: 100%;
+        display: flex;  
+        justify-content: space-between;
+        gap: vw(42) ;
+    }
+}

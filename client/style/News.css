@@ -1,0 +1,75 @@
+.news__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.news__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.news__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+.news__subtitle {
+  font-family: "Yellowtail", cursive;
+  color: #68a47f;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.news {
+  width: 100%;
+  min-height: 73.5rem;
+  padding: 11.0625rem 15.8125rem 0;
+}
+.news__container {
+  width: 73.9583333333vw;
+  padding: 0 0.625em;
+  margin: 0 auto;
+}
+.news__headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.news__titles-block {
+  width: 43.875rem;
+}
+.news__subtitle {
+  font-size: 2.25rem;
+  line-height: 3.0625rem;
+}
+.news__title {
+  margin-top: 0.5rem;
+  font-weight: 800;
+  font-size: 3.125rem;
+  line-height: 3.6875rem;
+}
+.news .btn-border {
+  border-color: #274c5b;
+}
+.news__content {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}

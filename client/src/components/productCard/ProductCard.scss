@@ -1,0 +1,66 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.product {
+  width: vw(335);
+  height: vw(483);
+  border-radius: rem(30);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 600;
+  @extend %main-text-style;
+  background-color: $white-smoke;
+  background-blend-mode: multiply;
+  &__category {
+    width: vw(96);
+    min-height: rem(31);
+    border-radius: rem(8);
+    padding: rem(5) rem(12) rem(6);
+    background-color: $main-text-color;
+    font-size: rem(15);
+    line-height: rem(20);
+    color: #ffffff;
+    margin-top: rem(29);
+    margin-left: rem(30);
+  }
+
+  &__description {
+    width: 100%;
+    height: 17%;
+    padding: 0 rem(26) rem(17) rem(30);
+  }
+  &__name {
+    @extend %title-text-style;
+    font-size: rem(20);
+    line-height: rem(23);
+  }
+  &__values {
+    margin-top: rem(13);
+    padding-top: rem(6);
+    border-top: 1px solid #dedddd;
+    display: flex;
+    align-items: center;
+    gap: rem(7);
+  }
+
+  &__price {
+    font-size: rem(15);
+    line-height: rem(20);
+    text-decoration: line-through;
+    color: #b8b8b8;
+  }
+  &__discount-price {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(25);
+    color: $main-text-color;
+    text-decoration: none;
+  }
+
+  #rating {
+    margin-left: auto;
+    fill: $star-color;
+  }
+}

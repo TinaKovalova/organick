@@ -1,0 +1,33 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.circle-sign{
+    width: rem(189);
+    height: rem(189);
+    border-radius: 50%;
+    background-color: #F1F1F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        width: 110%;
+        height: 110%;
+        border-radius: 50%;
+        border: rem(2) solid #7EB693;
+        position: absolute;
+        top: -5%;
+        left: -5%;
+    }
+
+    &__amount{
+        @include titleStyle();
+        
+    }
+    &__product{
+        @include titleStyle(600, 18,30);
+    }
+}

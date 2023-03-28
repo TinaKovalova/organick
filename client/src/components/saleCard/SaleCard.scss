@@ -1,0 +1,33 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.sale-card {
+  flex: 0 1 vw(682);
+  min-width: rem(341);
+  min-height: rem(367);
+  padding: rem(55);
+  display: flex;
+  align-items: center;
+  border-radius: rem(30);
+  background-size: cover;
+
+  &__content {
+    width: rem(278);
+    padding-right: rem(18);
+  }
+
+  &__subtitle {
+    @extend %subtitle-text-style;
+    font-size: rem(36);
+    line-height: rem(49);
+    color: $subtitle-color;
+  }
+  &__title {
+    @extend %title-text-style;
+    font-weight: 800;
+    font-size: rem(40);
+    line-height: rem(47);
+  }
+  .bright &__subtitle, .bright &__title {
+    color: #ffffff;
+  }
+}

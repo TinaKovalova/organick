@@ -1,0 +1,46 @@
+@import "../../styles/variables", "../../styles/functions";
+.eco-friendly {
+  width: 100%;
+  min-height: rem(931);
+  padding: rem(100) rem(108) 0;
+  background: url("../../assets/eco/field.png") 0 0 / auto 100% no-repeat;
+  &__container {
+    @include main-container();
+    display: flex;
+  }
+  &__content {
+    width: vw(789);
+    min-height: rem(723);
+    padding: rem(78) rem(72) rem(77) rem(89);
+    margin-left: auto;
+    border-radius: rem(30);
+    background-color: #ffffff;
+  }
+  &__subtitle {
+    @extend %subtitle-text-style;
+    font-size: rem(36);
+    line-height: rem(49);
+  }
+  &__title {
+    @extend %title-text-style;
+    font-weight: 800;
+    font-size: rem(50);
+    line-height: rem(59);
+    margin-top: rem(8);
+  }
+
+  &__item {
+    margin-top: rem(35);
+    width: vw(635);
+  }
+  &__item-title {
+    @extend %title-text-style;
+    font-weight: 500;
+    font-size: rem(25);
+    line-height: rem(29);
+  }
+  &__item-text {
+    @extend %main-text-style;
+    font-weight: 500;
+  }
+}

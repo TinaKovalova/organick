@@ -1,0 +1,13 @@
+@import "../../styles/variables", "../../styles/functions";
+
+.sale {
+  width: 100%;
+  min-height: rem(711);
+  padding: rem(154) rem(190) 0;
+  &__container {
+    @include main-container();
+    display: flex;
+    justify-content: space-between;
+    row-gap: rem(36);
+  }
+}

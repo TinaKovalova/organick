@@ -1,0 +1,35 @@
+@import '../../styles/variables', '../../styles/functions' ;
+  .header{
+    @extend %title-text-style;
+    width: 100%;
+    height:rem(204);
+    padding: rem(75) rem(162);
+    background-color: rgba(255, 255, 255, 0.9);
+    display:flex ;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    gap: vw(130);
+    top: 0;
+    left: 0;
+
+    &__logo {
+    }
+    &__navigation{
+      margin-left: rem(20);
+
+    }
+    &__user-panel{
+
+      display: flex;
+      gap: rem(18);
+      
+
+    }
+    &__search-panel{
+
+    }
+    &__cart{
+        
+    }
+  }
