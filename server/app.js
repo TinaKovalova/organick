@@ -20,6 +20,9 @@ app.use('/user',userRoutes);
 const subscriberRoutes = require('./routes/subscriber.routes');
 app.use('/subscriber',subscriberRoutes);
 
+const orderRoutes = require('./routes/order.routes');
+app.use('/order',orderRoutes);
+
 
 
 app.listen(port, ()=>{

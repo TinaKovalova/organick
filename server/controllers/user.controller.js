@@ -1,50 +1,31 @@
 const db = require('../db.config');
 
-const getAll = (req, res)=>{
-    const query = 'select * from user';
-    db.query(query, (error, data)=>{
-        if(error) return res.send(error);
-        return res.json(data);
-    });
-}
-
-const getById=(req, res)=>{
-    const query = `select * from user where id =?`;
-    db.query(query, req.params.id, (error, data)=>{
-        if(error) return res.send(error);
-        return res.json(data);
-    })
-}
-
-const remove=(req, res)=>{
-    const query = `delete from user where id =?`;
-    db.query(query,[req.params.id], (error, data)=>{
-        if(error) return res.send(error);
-        return res.json(data);
-    })
-}
 const add = (req, res)=>{
-    const query = `insert into user set ?`;
+    const query = "insert into `user` set ?";
     const params = {...req.body};
     db.query(query, params, (error, data)=>{
        if(error) return res.send(error);
        return res.json(data)
     } )
 }
-
-const update = (req, res)=>{
-     const query = `update user set ? where id=?`;
-     db.query(query,[{...req.body}, req.params.id],(error, data)=>{
+const getAll = (req, res)=>{
+    const query = "select * from `user`";
+    db.query(query, (error, data)=>{
         if(error) return res.send(error);
         return res.json(data);
-     } )
+    });
+}
+const getByPhone=(req, res)=>{
+    const query = "select * from `user` where phone= ?";
+    db.query(query, req.params.phone, (error, data)=>{
+        if(error) return res.send(error);
+        return res.json(data);
+    })
 }
 
 module.exports ={
-    getAll,
-    getById,
     add,
-    remove,
-    update
+    getAll,
+    getByPhone
 }
 
