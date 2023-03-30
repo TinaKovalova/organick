@@ -3,7 +3,7 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config({path: path.resolve(__dirname, '.env')});
 const port = process.env.PORT || 3000;
-const products = require('./controllers/product.controller');
+
 
 const app = express();
 app.use(express.json());
@@ -11,11 +11,9 @@ app.use(cors());
 
 app.get('/', (req, res)=>res.send('Organick') );
 
-app.get('/product', products.getAll)
-app.get('/product/:id', products.getById)
-app.delete('/product/:id', products.remove)
-app.put('/product/:id', products.update)
-app.post('/product', products.add)
+const productRoutes = require('./routes/product.routes');
+app.use('/product',productRoutes);
+
 
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}...`);
