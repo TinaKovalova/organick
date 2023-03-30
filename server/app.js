@@ -17,17 +17,13 @@ app.use('/product',productRoutes);
 const userRoutes = require('./routes/user.routes');
 app.use('/user',userRoutes);
 
+const subscriberRoutes = require('./routes/subscriber.routes');
+app.use('/subscriber',subscriberRoutes);
+
+
 
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}...`);
 });
-//test data
-// {
-//     "categoryId":3,
-//     "productName":"tomato",
-//     "price":25.00,
-//     "discount":null,
-//     "star":0,
-//     "imagePath":null
-// }
+
 
