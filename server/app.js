@@ -14,6 +14,9 @@ app.get('/', (req, res)=>res.send('Organick') );
 const productRoutes = require('./routes/product.routes');
 app.use('/product',productRoutes);
 
+const userRoutes = require('./routes/user.routes');
+app.use('/user',userRoutes);
+
 
 app.listen(port, ()=>{
     console.log(`Listening on port ${port}...`);
