@@ -48,7 +48,7 @@ CREATE TABLE testimonial
 CREATE TABLE `order`
 (
    id int not null primary key auto_increment,
-   `date` datetime not null
+   `date` date not null
 );
 
 CREATE TABLE product
@@ -72,8 +72,8 @@ CREATE TABLE product_order
    userId int not null,
    productCount decimal(5, 3) not null,
    productPrice decimal(5, 2) not null,
-   productDiscount int not null,
-   productSum decimal(5, 2) not null,
+   productDiscount int,
+   productSum decimal(10, 2) not null,
    foreign key (orderId) references `order`(id),
    foreign key (productId) references product(id),
    foreign key (userId) references `user`(id)
@@ -101,9 +101,13 @@ VALUES (1,'Mung Bean',11,null,3,'/product/Image.png'),
 (1,'Cabbage',17,null,2,'/product/Image.png');
 
 select * from category;
+select * from `order`;
+select * from product_order;
+select * from  `user` where phone ='0664036838';
 select * from product;
 delete from product where id=2;
 update product set categoryId="1",productName="dgd", price=25, discount=null, star=3, imagePath=null where id=18;
 
-
+insert into `order` (`date`) values (now());
+insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `productCount` = 2, `productPrice` = 10, `productDiscount` = 1, `productSum` = 3000.22
 
