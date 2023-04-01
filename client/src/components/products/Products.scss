@@ -4,6 +4,7 @@
     width: 100%;
     min-height: rem(1720);
     padding: rem(176) rem(200) 0;
+    position: relative;
     &__container{
         @include main-container();
         display: flex;
@@ -32,4 +33,16 @@
         gap: rem(20);
 
     }
+    &__detail{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(244, 244, 244, 0.82);
+        display: flex;
+        align-items: center;
+        visibility: hidden;
+    }
+  
 }

@@ -25,7 +25,7 @@ $star-color:#FFA858;
   color: $subtitle-color;
 }
 
-$breakpoint-desktop: size-rem($container-width); /*>=992 Desktop, large screens*/
-$breakpoint-laptop: size-rem(991.98); /*>=768 Small screens, laptop*/
-$breakpoint-tablet: size-rem(767.98); /*>=480 Ipads, Tablets*/
-$breakpoint-mobile: size-rem(479.98); /*<=480 mobile*/
+$breakpoint-desktop:($container-width)px; /*>=992 Desktop, large screens*/
+$breakpoint-laptop: 991.98px; /*>=768 Small screens, laptop*/
+$breakpoint-tablet: 767.98px; /*>=480 Ipads, Tablets*/
+$breakpoint-mobile: 479.98px; /*<=480 mobile*/
