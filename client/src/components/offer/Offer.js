@@ -12,28 +12,28 @@ export function Offer() {
             name="Calabrese Broccoli"
             price="20.00"
             discout="5"
-            imageName="Image.png"
+            imageName="/product/Image.png"
             category="Vegetable"
           />
           <ProductCard
             name="Calabrese Broccoli"
             price="20.00"
             discout="5"
-            imageName="Image.png"
+            imageName="/product/Image.png"
             category="Vegetable"
           />
           <ProductCard
             name="Calabrese Broccoli"
             price="20.00"
             discout="5"
-            imageName="Image.png"
+            imageName="/product/Image.png"
             category="Vegetable"
           />
           <ProductCard
             name="Calabrese Broccoli"
             price="20.00"
             discout="5"
-            imageName="Image.png"
+            imageName="/product/Image.png"
             category="Vegetable"
           />
         </div>

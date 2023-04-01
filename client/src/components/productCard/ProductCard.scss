@@ -1,8 +1,8 @@
 @import "../../styles/variables", "../../styles/functions";
 
 .product {
-  width: vw(335);
-  height: vw(483);
+  width: rem(335);
+  height: rem(483);
   border-radius: rem(30);
   overflow: hidden;
   position: relative;
@@ -12,9 +12,11 @@
   font-weight: 600;
   @extend %main-text-style;
   background-color: $white-smoke;
+  background-repeat: no-repeat;
+  background-position: center;
   background-blend-mode: multiply;
   &__category {
-    width: vw(96);
+    width: fit-content;
     min-height: rem(31);
     border-radius: rem(8);
     padding: rem(5) rem(12) rem(6);
@@ -48,7 +50,6 @@
   &__price {
     font-size: rem(15);
     line-height: rem(20);
-    text-decoration: line-through;
     color: #b8b8b8;
   }
   &__discount-price {
@@ -59,8 +60,7 @@
     text-decoration: none;
   }
 
-  #rating {
+  .rating {
     margin-left: auto;
-    fill: $star-color;
   }
 }
