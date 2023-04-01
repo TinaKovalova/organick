@@ -8,7 +8,17 @@ export function Products() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getAllProducts().then((result) => setProducts(result.data));
+    getAllProducts().then((result) =>{
+      const compareProducts =(productA,productB)=>{
+        if(productA.discount> productB.discount){
+          return -1
+        }else if(productA.discount < productB.discount){
+          return 1
+        }
+        return 0 
+      }
+      setProducts(result.data.sort(compareProducts))
+    });
   }, []);
   
   return (
