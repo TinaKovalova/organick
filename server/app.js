@@ -23,6 +23,8 @@ app.use('/subscriber',subscriberRoutes);
 const orderRoutes = require('./routes/order.routes');
 app.use('/order',orderRoutes);
 
+const categoryRoutes = require('./routes/category.routes');
+app.use('/category',categoryRoutes);
 
 
 app.listen(port, ()=>{
