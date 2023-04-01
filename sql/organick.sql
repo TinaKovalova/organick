@@ -48,7 +48,7 @@ CREATE TABLE testimonial
 CREATE TABLE `order`
 (
    id int not null primary key auto_increment,
-   `date` date not null
+   `date` datetime not null
 );
 
 CREATE TABLE product
@@ -56,6 +56,9 @@ CREATE TABLE product
    id int not null primary key auto_increment,
    categoryId int not null,
    productName varchar(40) not null,
+   `description` varchar(300),
+   fullDescription varchar(600),
+   exstraInformation varchar(500),
    price decimal(5, 2) not null,
    discount int,
    star int,
@@ -70,7 +73,7 @@ CREATE TABLE product_order
    orderId int not null,
    productId int not null,
    userId int not null,
-   productCount decimal(5, 3) not null,
+   quantity decimal(5, 3) not null,
    productPrice decimal(5, 2) not null,
    productDiscount int,
    productSum decimal(10, 2) not null,
@@ -82,32 +85,102 @@ CREATE TABLE product_order
 
 INSERT INTO category(categoryName) VALUES ('vegetable'),('fresh'),('millets'), ('health'),('nuts');
 
-INSERT INTO product(categoryId,productName,price,discount,star,imagePath)
-VALUES (1,'Mung Bean',11,null,3,'/product/Image.png'),
-(1,'calabrese broccoli',20,35,4,'/product/Image.png'),
-(2,'Fresh Banana Fruites',20,30,5,'/product/Image1.png'),
-(1,'Brown Hazelnut',12,null,0,'/product/Image.png'),
-(3,'White Nuts',30,35,4,'/product/Image.png'),
-(1,'Vegan Red Tomato',20,35,5,'/product/Image.png'),
-(4,'Mung Bean',20,35,4,'/product/Image.png'),
-(1,'Onion',17,null,4,'/product/Image.png'),
-(5,'Brown Hazelnut',20,35,4,'/product/Image.png'),
-(2,'Eggs',20,35,4,'/product/Image.png'),
-(2,'Zelco Suji Elaichi Rusk',20,35,4,'/product/Image.png'),
-(4,'Mung Bean',20,35,4,'/product/Image.png'),
-(5,'White Hazelnut',20,40,3,'/product/Image.png'),
-(2,'Fresh Corn',20,30,4,'/product/Image.png'),
-(2,'Organic Almonds',15,null,4,'/product/Image.png'),
-(1,'Cabbage',17,null,2,'/product/Image.png');
+INSERT INTO product(categoryId,productName,`description`,fullDescription,exstraInformation, price,discount,star,imagePath)
+VALUES (1,'Mung Bean',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+11,null,3,'/product/Image.png'),
+(1,'calabrese broccoli', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,35,4,'/product/Image.png'),
+(2,'Fresh Banana Fruites', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,30,5,'/product/Image1.png'),
+(1,'Brown Hazelnut', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+12,null,0,'/product/Image.png'),
+(3,'White Nuts',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+30,35,4,'/product/Image.png'),
+(1,'Vegan Red Tomato',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,35,5,'/product/Image.png'),
+(4,'Mung Bean',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+ 20,35,4,'/product/Image.png'),
+(1,'Onion',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+17,null,4,'/product/Image.png'),
+(5,'Brown Hazelnut',
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+ 20,35,4,'/product/Image.png'),
+(2,'Eggs', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,35,4,'/product/Image.png'),
+(2,'Zelco Suji Elaichi Rusk', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,35,4,'/product/Image.png'),
+(4,'Mung Bean', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,35,4,'/product/Image.png'),
+(5,'White Hazelnut', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,40,3,'/product/Image.png'),
+(2,'Fresh Corn', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+20,30,4,'/product/Image.png'),
+(2,'Organic Almonds', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+15,null,4,'/product/Image.png'),
+(1,'Cabbage', 
+"Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
+'Welcome to the world of natural and organic. Here you can discover the bounty of nature. We have grown on the principles of health, ecology, and care. We aim to give our customers a healthy chemical-free meal for perfect nutrition. It offers about 8–10% carbs. Simple sugars — such as glucose and fructose — make up 70% and 80% of the carbs in raw.',
+"A refrigerator is the best place to store pistachios if you don't plan to eat them all right away. Package them in an airtight container (Ziplock, Tupperware, jar with tight lid) and they will stay fresh for up to a year. An airtight package helps prevent condensation, which would make them lose their crunch.",
+ 17,null,2,'/product/Image.png');
 
 select * from category;
 select * from `order`;
 select * from product_order;
+select * from `user`;
 select * from  `user` where phone ='0664036838';
 select * from product;
+select productid,categoryId, category.categoryName, productName, `description`,price , discount, star, imagePath from product inner join category on product.categoryId=category.id;
 delete from product where id=2;
-update product set categoryId="1",productName="dgd", price=25, discount=null, star=3, imagePath=null where id=18;
+update product set categoryId="1",productName="dgd", price=25, discount=null, star=3, imagePath=null where id=1;
 
 insert into `order` (`date`) values (now());
-insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `productCount` = 2, `productPrice` = 10, `productDiscount` = 1, `productSum` = 3000.22
+
+insert into `user` set `userName` = "Ivan", `surName` = "Duda", `phone` = "0680552233", `email` = "duda@er.ua", `address` = "Kyiv";
+insert into `user` set `userName` = "Ivan2", `surName` = "Duda2", `phone` = "0680552200", `email` = "duda2@er.ua", `address` = "Kyiv2";
+insert into `user` set `userName` = "Ivan3", `surName` = "Duda3", `phone` = "0680552211", `email` = "duda3@er.ua", `address` = "Kyiv3";
+insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `quantity` = 2, `productPrice` = 10, `productDiscount` = 1, `productSum` = 3000.22;
 
