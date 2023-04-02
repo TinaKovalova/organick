@@ -31,6 +31,7 @@ export function ProductDetails(props) {
   }
   const addProduct = (e) => {
     e.preventDefault();
+    
   };
   const changeQuantity = (e) => setQuantity(e.target.value);
   const changeProductInfo = (e) => {
