@@ -1,0 +1,193 @@
+.details .main-content__values, .details {
+  font-family: "Open Sans", sans-serif;
+}
+
+.details .main-content__form, .details .main-content__title, .details .main-content__close-btn {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.details .main-content__values, .details {
+  font-family: "Open Sans", sans-serif;
+}
+
+.details .main-content__form, .details .main-content__title, .details .main-content__close-btn {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.details {
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 7.1875rem 9rem 0;
+  margin: auto;
+  background-color: #FFFFFF;
+}
+.details__container {
+  width: 73.9583333333vw;
+  padding: 0 0.625em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1rem 9rem;
+}
+.details__content-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5.5rem;
+  position: relative;
+}
+.details__image {
+  width: 36.9375rem;
+  height: 36.9375rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #f9f8f8;
+  background-blend-mode: multiply;
+  border-radius: 1.875rem;
+}
+.details__category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 1.9375rem;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 2.375rem;
+  left: 2.1875rem;
+  color: #FFFFFF;
+  padding: 0.3125rem 0.75rem 0.375rem;
+  background-color: #274c5b;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+.details .main-content {
+  width: 39rem;
+  padding-right: 0.75rem;
+}
+.details .main-content__close-btn {
+  width: 4rem;
+  height: 2.875rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4375rem;
+  color: #FFFFFF;
+  background-color: #274c5b;
+  position: absolute;
+  top: 1.0625rem;
+  right: -1.9375rem;
+  border-radius: 1rem;
+  text-align: center;
+  vertical-align: bottom;
+}
+.details .main-content__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2.9375rem;
+}
+.details .main-content__rating {
+  height: 1.1875rem;
+  margin: 0.5625rem 0;
+}
+.details .main-content__price {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+  color: #b8b8b8;
+}
+.details .main-content__discount {
+  font-weight: 700;
+  font-size: 1.5625rem;
+  line-height: 2.125rem;
+  color: #274c5b;
+  margin-left: 0.5625rem;
+}
+.details .main-content__text {
+  margin-top: 1.6875rem;
+  -webkit-mask-position: 1.6875rem;
+          mask-position: 1.6875rem;
+}
+.details .main-content__form {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4375rem;
+  margin-top: 1.6875rem;
+  width: 29.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+.details .main-content__lable {
+  display: inline-block;
+  width: 5.625rem;
+}
+.details .main-content__field {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  font-weight: 700;
+  width: 8.375rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: 2px solid #274c5b;
+}
+.details__extra {
+  width: 59.21875vw;
+  margin-left: 4.5625rem;
+}
+.details__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+  margin-top: 5.625rem;
+}
+.details__actions-btn {
+  min-width: 21rem;
+  min-height: 5rem;
+  border-radius: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #EFF6F1;
+  color: #274c5b;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  line-height: 2.125rem;
+}
+.details .active-btn {
+  background-color: #274c5b;
+  color: #FFFFFF;
+}
+.details__description {
+  margin-top: 1.6875rem;
+  width: 100%;
+  min-height: 5.625rem;
+  text-align: center;
+}

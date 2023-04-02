@@ -39,7 +39,7 @@
   display: flex;
   gap: 4.7916666667vw;
 }
-@media (max-width: size-rem(991.98)) {
+@media (max-width: 991.98px) {
   .footer__container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -167,7 +167,7 @@
 .footer__copyright .bold-text {
   font-weight: 700;
 }
-@media (max-width: size-rem(991.98)) {
+@media (max-width: 991.98px) {
   .footer__container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

@@ -30,6 +30,7 @@
   width: 100%;
   min-height: 107.5rem;
   padding: 11rem 12.5rem 0;
+  position: relative;
 }
 .products__container {
   width: 73.9583333333vw;
@@ -65,4 +66,21 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1.25rem;
+}
+.products__detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(244, 244, 244, 0.82);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.products .hidden {
+  visibility: hidden;
 }

@@ -1,0 +1,178 @@
+.cart__total-block, .cart__close-btn, .cart__form, .cart__product-name, .cart__title, .cart {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.cart__total-block, .cart__close-btn, .cart__form, .cart__product-name, .cart__title, .cart {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.cart {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cart__title-block {
+  width: 100%;
+  height: 28.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #E3F1E9;
+  background: url("../../../assets/cart/Pattern.svg") center/cover no-repeat, url("../../../assets/cart/bg-fruit.png") 100% center/cover no-repeat;
+}
+.cart__title {
+  padding-left: 1.25rem;
+  font-size: 4.375rem;
+  font-weight: 800;
+  line-height: 5.125rem;
+}
+.cart__main-block {
+  margin-top: 8.8125rem;
+  width: 100%;
+  background-color: rgba(253, 176, 45, 0.16);
+}
+.cart__container {
+  width: 73.9583333333vw;
+  padding: 0 0.625em;
+  margin: 0 auto;
+  padding: 9.3125rem 0 3.6875rem;
+}
+.cart__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cart__order-item {
+  width: 100%;
+  min-height: 14.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4.5rem;
+}
+.cart__order-image {
+  display: block;
+  border-radius: 1.875rem;
+  width: 18.25rem;
+  height: 14.125rem;
+  background-color: #F9F8F8;
+  mix-blend-mode: multiply;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.cart__product-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+.cart__price {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #B8B8B8;
+}
+.cart__form {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+  margin-top: 1.6875rem;
+  width: 18.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  gap: 1.375rem;
+  position: relative;
+}
+.cart__lable {
+  display: inline-block;
+  width: 8.6875rem;
+}
+.cart__field {
+  display: inline-block;
+  vertical-align: bottom;
+  text-align: center;
+  font-weight: 700;
+  width: 8.375rem;
+  height: 5rem;
+  border-radius: 1rem;
+  color: #274c5b;
+  border: 2px solid #274c5b;
+  background-color: #FFFFFF;
+}
+.cart__close-btn {
+  width: 4rem;
+  height: 2.875rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4375rem;
+  color: #FFFFFF;
+  background-color: #274c5b;
+  position: absolute;
+  top: 1.0625rem;
+  right: -6.0625rem;
+  border-radius: 1rem;
+  text-align: center;
+  vertical-align: bottom;
+}
+.cart__total-block {
+  margin-top: 3.4375rem;
+  min-width: 17.375rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.9375rem;
+}
+.cart__total-block .sum {
+  display: block;
+  float: right;
+}
+.cart__total-cost {
+  width: 100%;
+}
+.cart__total-diacount {
+  margin-top: 2rem;
+  width: 100%;
+}
+.cart__btn {
+  margin-top: 4.75rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
