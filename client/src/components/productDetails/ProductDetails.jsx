@@ -1,4 +1,5 @@
 import "./ProductDetails.scss";
+import uniqid from 'uniqid';
 import { Button } from "../button/Button";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,8 +23,10 @@ export function ProductDetails(props) {
 
   const stars = [];
   while (stars.length < 6) {
+    let uniqKey=uniqid();
     stars.push(
       <FontAwesomeIcon
+        key={uniqKey}
         icon={faStar}
         style={{ color: stars.length <= rating ? "#FFA858" : "#525c60" }}
       />
@@ -31,7 +34,7 @@ export function ProductDetails(props) {
   }
   const addProduct = (e) => {
     e.preventDefault();
-    
+
   };
   const changeQuantity = (e) => setQuantity(e.target.value);
   const changeProductInfo = (e) => {

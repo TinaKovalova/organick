@@ -25,7 +25,7 @@ export function Footer() {
         <div className="footer__informer">
           <div className="footer__widgets widgets">
             <Logo />
-            <p class="widgets__description">
+            <p className="widgets__description">
               Simply dummy text of the printing and typesetting industry.
               LoremIpsum simply dummy text of the printing
             </p>
@@ -78,7 +78,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <p class="footer__copyright">
+      <p className="footer__copyright">
         Copyright ©<span className="bold-text">Organick</span>| Designed by{" "}
         <span className="bold-text">VictorFlow</span>
         Templates - Powered by <span className="bold-text">Webflow</span>
