@@ -10,6 +10,7 @@ export function ProductCard(props) {
     rating,
     imagePath,
     categoryName,
+    selectProduct
   } = props
   const stars =[];
   while(stars.length<6){
@@ -17,6 +18,7 @@ export function ProductCard(props) {
   }
   return (
     <div className="product"
+    onClick={()=>selectProduct(id)}
     style={{backgroundImage: `url(${require("../../assets"+ (imagePath || "/product/fruit-vegetables.png"))})`}}
     >
       <div className="product__category">{categoryName}</div>

@@ -4,7 +4,7 @@
     padding: rem(115) rem(144) 0;
     margin: auto;
     @extend %main-text-style;
-    background-color:aqua;
+    background-color:#FFFFFF;
 
 &__container{
     @include main-container();

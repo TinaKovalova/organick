@@ -15,7 +15,7 @@ export function ProductDetails(props) {
     exstraInformation,
     rating,
     imagePath,
-    categoryName,
+    categoryName
   } = props;
   const [quantity, setQuantity] = useState(1);
   const [productInfo, setProductInfo] = useState(fullDescription);
@@ -46,8 +46,7 @@ export function ProductDetails(props) {
     }
   };
   return (
-    <>
-      <div className="details">
+    <div className="details" >
         <div className="details__container">
           <div className="details__content-wrapper">
             <div
@@ -107,6 +106,5 @@ export function ProductDetails(props) {
           </div>
         </div>
       </div>
-    </>
   );
 }
