@@ -1,0 +1,21 @@
+@import "../../../styles/variables", "../../../styles/functions";
+.thanks{
+    width: 100%;
+    height: auto;
+    padding-bottom: rem(269);
+    &__title{
+        margin-top: rem(94);
+        @include titleStyle(800, 70,82);
+        text-align:center;
+        &::first-letter{
+        text-transform: uppercase;
+       }
+    }
+
+    &__image{
+        margin-top: rem(44);
+        height: vw(450);
+        background: url('../../../assets/thanks/Background.png') center/cover no-repeat;
+
+    }
+}

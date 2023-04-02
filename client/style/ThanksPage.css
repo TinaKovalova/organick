@@ -1,0 +1,38 @@
+.thanks__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.thanks__title {
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.thanks {
+  width: 100%;
+  height: auto;
+  padding-bottom: 16.8125rem;
+}
+.thanks__title {
+  margin-top: 5.875rem;
+  font-size: 4.375rem;
+  font-weight: 800;
+  line-height: 5.125rem;
+  text-align: center;
+}
+.thanks__title::first-letter {
+  text-transform: uppercase;
+}
+.thanks__image {
+  margin-top: 2.75rem;
+  height: 23.4375vw;
+  background: url("../../../assets/thanks/Background.png") center/cover no-repeat;
+}

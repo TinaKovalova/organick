@@ -72,7 +72,6 @@
 
   &__order-form {
     @include titleStyle(700, 32, 38);
-    margin-top: rem(27);
     width: rem(295);
     display: flex;
     align-items: center;

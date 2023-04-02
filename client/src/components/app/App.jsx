@@ -5,6 +5,7 @@ import { HomePage } from "../pages/homePage/HomePage";
 import { CartPage } from "../pages/cartPage/CartPage";
 import { NotFoundPage } from "../pages/notFoundPage/NotFoundPage";
 import "./App.scss";
+import { ThanksPage } from "../pages/thanksPage/ThanksPage";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/thanks" element={<ThanksPage />} />
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </main>

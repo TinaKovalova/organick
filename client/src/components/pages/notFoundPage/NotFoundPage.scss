@@ -1,0 +1,56 @@
+@import "../../../styles/variables", "../../../styles/functions";
+
+.not-found {
+  width: 100%;
+  min-height: vw(898);
+  background-color: #bbc9c9;
+  background: url("../../../assets/notFound/background.png") center/cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  $content-width: 533;
+
+  &__container {
+    @include main-container();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__content {
+    width: vw($content-width);
+    min-height: vw(354);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: percent(502, $content-width);
+    height: vw(219);
+    background: url("../../../assets/notFound/404.svg") center/cover no-repeat;
+  }
+  &__title {
+    @include titleStyle(800, 70, 82);
+    text-align: center;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__text {
+    @extend %main-text-style;
+    font-size: rem(18);
+    font-weight: 600;
+    line-height: rem(30);
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__actions {
+    margin-top: vw(40);
+    width: vw($content-width);
+  }
+  &__btn {
+    width: vw(275);
+  }
+}
