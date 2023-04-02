@@ -32,7 +32,7 @@ export function CartPage(){
                               >${price}</span>
                               <span className="cart__discount-price">{discount? '$'+ discount : null}</span>
                             </div> */}
-                            <form className="cart__form" onClick={deleteProduct}>
+                            <form className="cart__order-form" onClick={deleteProduct}>
                                <label
                                  className="cart__lable"
                                  htmlFor="cart-quantity"
@@ -55,32 +55,31 @@ export function CartPage(){
                         <p className='cart__total-cost'>Total Cost <span className='sum'>26$</span></p>
                         <p className='cart__total-diacount'>Discount <span className='sum'>26$</span></p>
                     </div>
-                    {/* <form className='cart__form form'>
-                        <div>
-                            <label>Full Name*
-                            <input type='text' placeholder='Your full name' required/>
-                            </label>
-                       
-                            <label>Your Email*
-                            <input type='email' placeholder='example@yourmail.com' required/>
-                            </label>
-                            
+                    <form className='cart__customer-form customer-form '>
+                     <div className='customer-form__row'>
+                        <div className='customer-form__row-item'>
+                            <label htmlFor='name' className='cart__field-label'>Full Name*</label>
+                            <input type='text' name ="name" className='customer-form__field' placeholder='Your full name' required/>
                         </div>
-                        <div>
-                             <label>Address*
-                             <input type='text' placeholder='your company  address' required/>
-                             </label>
-                       
-                            <label>Phone number*
-                            <input type='text' placeholder='Enter your phone' required/>
-                            </label>
-                           
+                        <div className='customer-form__row-item'>
+                            <label  htmlFor='email' className='cart__field-label'>Your Email* </label>
+                            <input type='email' name='email' className='customer-form__field'  placeholder='example@yourmail.com' required/>
+                        </div>   
                         </div>
-                        <label>Message
-                        <textarea placeholder='some extra information'></textarea>
+                        <div className='customer-form__row'>
+                        <div className='customer-form__row-item'>
+                             <label  htmlFor='address' className='cart__field-label'>Address*</label>
+                             <input type='text' name='address' className='customer-form__field'  placeholder='your company  address' required/>
+                        </div>
+                        <div className='customer-form__row-item'>
+                            <label  htmlFor='phone' className='cart__field-label'>Phone number* </label>
+                            <input type='text' name='phone' className='customer-form__field'  placeholder='Enter your phone' required/>
+                        </div>
+                      </div>
+                        <label className='cart__field-label'>Message
+                        <textarea placeholder='some extra information' className='customer-form__field message-field' ></textarea>
                         </label>
-                        
-                    </form> */}
+                    </form>
                    <Button className="dark-btn cart__btn" text="To order" icon/>
                 </div>
             </div>
