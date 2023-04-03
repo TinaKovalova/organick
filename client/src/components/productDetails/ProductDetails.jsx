@@ -1,10 +1,8 @@
 import "./ProductDetails.scss";
-import uniqid from 'uniqid';
 import { Button } from "../button/Button";
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-
+import { useState, useContext, useEffect } from "react";
+import { LocalStorageContext } from "../app/App";
+import { drowStars } from "../../functions";
 export function ProductDetails(props) {
   const {
     id,
@@ -16,27 +14,40 @@ export function ProductDetails(props) {
     exstraInformation,
     rating,
     imagePath,
-    categoryName
+    categoryName,
   } = props;
+  const stars = drowStars(5, rating);
+
+  const { store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(1);
   const [productInfo, setProductInfo] = useState(fullDescription);
+  useEffect(()=>{
+    if(findProductInStore(id)) setQuantity(findProductInStore(id).quantity);
+  },[id])
 
-  const stars = [];
-  while (stars.length < 6) {
-    let uniqKey=uniqid();
-    stars.push(
-      <FontAwesomeIcon
-        key={uniqKey}
-        icon={faStar}
-        style={{ color: stars.length <= rating ? "#FFA858" : "#525c60" }}
-      />
-    );
-  }
+  const findProductInStore= (productId) =>store?.products.find((item) => item.id === productId);
+
   const addProduct = (e) => {
     e.preventDefault();
-
+    if (e.target.closest(".dark-btn")) {
+      const product = { id, quantity, name, price, discount };
+      if (store) {
+        let existProduct = findProductInStore(product.id);
+        existProduct
+          ? (existProduct.quantity = product.quantity)
+          : store.products.push(product);
+        localStorage.setItem("order", JSON.stringify(store));
+      } else {
+        localStorage.setItem(
+          "order",
+          JSON.stringify({ products: [{ ...product }] })
+        );
+      }
+      updateStore();
+    }
   };
-  const changeQuantity = (e) => setQuantity(e.target.value);
+  const changeQuantity = (e) => setQuantity(+e.target.value);
+
   const changeProductInfo = (e) => {
     const target = e.target;
     if (target.closest(".details__actions-btn")) {
@@ -50,65 +61,59 @@ export function ProductDetails(props) {
     }
   };
   return (
-    <div className="details" >
-        <div className="details__container">
-          <div className="details__content-wrapper">
-            <div
-              className="details__image"
-              style={{
-                backgroundImage: `url(${require("../../assets" +
-                  (imagePath || "/product/fruit-vegetables.png"))})`,
-              }}
-            >
-              <div className="details__category">{categoryName}</div>
-            </div>
-            <div className="details__main-content main-content">
-              <button className="main-content__close-btn">X</button>
-              <h2 className="main-content__title">{name}</h2>
-              <p className="main-content__rating">{stars}</p>
-              <p className="main-content__values">
-                <span
-                  className="main-content__price"
-                  style={{ textDecoration: discount ? "line-through" : "none" }}
-                >
-                  ${price}
-                </span>
-                <span className="main-content__discount">
-                  {discount ? "$" + discount : null}
-                </span>
-              </p>
-              <p className="main-content__text">{description}</p>
-              <form className="main-content__form" onClick={addProduct}>
-                <label
-                  className="main-content__lable"
-                  htmlFor="details-quantity"
-                >
-                  Quantity :
-                </label>
-                <input
-                  className="main-content__field"
-                  type="number"
-                  name="quantity"
-                  id="details-quantity"
-                  value={quantity}
-                  onChange={changeQuantity}
-                />
-                <Button className="dark-btn" text="Add To Car" icon />
-              </form>
-            </div>
+    <div className="details">
+      <div className="details__container">
+        <div className="details__content-wrapper">
+          <div
+            className="details__image"
+            style={{backgroundImage: `url(${require("../../assets" + (imagePath || "/product/fruit-vegetables.png"))})`}}
+          >
+            <div className="details__category">{categoryName}</div>
           </div>
-          <div className="details__extra">
-            <div className="details__actions" onClick={changeProductInfo}>
-              <button className="details__actions-btn active-btn" value="full">
-                Product Description
-              </button>
-              <button className="details__actions-btn" value="exstra">
-                Additional Info
-              </button>
-            </div>
-            <p className="details__description">{productInfo}</p>
+          <div className="details__main-content main-content">
+            <button className="main-content__close-btn">X</button>
+            <h2 className="main-content__title">{name}</h2>
+            <p className="main-content__rating">{stars}</p>
+            <p className="main-content__values">
+              <span
+                className="main-content__price"
+                style={{ textDecoration: discount ? "line-through" : "none" }}
+              >
+                ${price}
+              </span>
+              <span className="main-content__discount">
+                {discount ? "$" + discount : null}
+              </span>
+            </p>
+            <p className="main-content__text">{description}</p>
+            <form className="main-content__form" onClick={addProduct}>
+              <label className="main-content__lable" htmlFor="details-quantity">
+                Quantity :
+              </label>
+              <input
+                className="main-content__field"
+                type="number"
+                name="quantity"
+                id="details-quantity"
+                value={quantity}
+                onChange={changeQuantity}
+              />
+              <Button className="dark-btn" text="Add To Car" icon />
+            </form>
           </div>
         </div>
+        <div className="details__extra">
+          <div className="details__actions" onClick={changeProductInfo}>
+            <button className="details__actions-btn active-btn" value="full">
+              Product Description
+            </button>
+            <button className="details__actions-btn" value="exstra">
+              Additional Info
+            </button>
+          </div>
+          <p className="details__description">{productInfo}</p>
+        </div>
       </div>
+    </div>
   );
 }

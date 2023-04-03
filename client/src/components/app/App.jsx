@@ -6,11 +6,23 @@ import { CartPage } from "../pages/cartPage/CartPage";
 import { NotFoundPage } from "../pages/notFoundPage/NotFoundPage";
 import "./App.scss";
 import { ThanksPage } from "../pages/thanksPage/ThanksPage";
+import { createContext, useEffect, useMemo, useState } from "react";
+
+export const LocalStorageContext =createContext(null);
 
 export function App() {
+  const [store, setStore]=useState(null);
+  useEffect(()=>{
+   const order = localStorage.getItem('order');
+   if(order) setStore(JSON.parse(localStorage.getItem('order')));
+  },[])
+  const updateStore =()=>setStore(JSON.parse(localStorage.getItem('order')));
+  const providerValue = useMemo(()=>({store, updateStore}), [store])
+
   return (
     <div className="App">
-      <BrowserRouter>
+    <LocalStorageContext.Provider value={providerValue}>
+    <BrowserRouter>
         <Header />
         <main className="main">
           <Routes>
@@ -22,7 +34,8 @@ export function App() {
         </main>
         <Footer />
       </BrowserRouter>
-   
+
+    </LocalStorageContext.Provider>
     </div>
   );
 }

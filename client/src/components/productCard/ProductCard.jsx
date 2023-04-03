@@ -1,7 +1,6 @@
 import "./ProductCard.scss";
-import uniqid from 'uniqid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+
+import {drowStars} from '../../functions';
 export function ProductCard(props) {
   const {
     id,
@@ -13,11 +12,7 @@ export function ProductCard(props) {
     categoryName,
     selectProduct
   } = props
-  const stars =[];
-  while(stars.length<6){
-    let uniqKey=uniqid();
-    stars.push( <FontAwesomeIcon key={uniqKey} icon={faStar} style={{color:stars.length<=rating? "#FFA858" : "#525c60" }} />)
-  }
+  const stars = drowStars(5,rating);
   return (
     <div className="product"
     onClick={()=>selectProduct(id)}

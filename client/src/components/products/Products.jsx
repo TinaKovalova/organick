@@ -33,13 +33,11 @@ export function Products() {
   };
 
   const showDetails = (e) => {
-    console.dir(e.target)
     if(e.target.classList.contains("products__detail") || e.target.classList.contains('main-content__close-btn') ||e.target.classList.contains("product")){
       ditail.current.classList.toggle("hidden");
     }
   };
   const setSelected =(id)=>{
-    console.log(id)
     const selected =products.find(product=>product.id===id);
     setSelectedProduct(selected);
   };

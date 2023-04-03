@@ -11,7 +11,7 @@ export function Header() {
       <Navigation className="header__navigation" />
       <div className="header__user-panel">
         <Search className="header__search-panel" />
-        <Cart className="header__cart" />
+        <Cart className="header__cart"/>
       </div>
     </header>
   );
