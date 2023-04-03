@@ -6,7 +6,7 @@ import { drowStars } from "../../functions";
 export function ProductDetails(props) {
   const {
     id,
-    name,
+    productName,
     price,
     discount,
     discountSum,
@@ -14,12 +14,12 @@ export function ProductDetails(props) {
     description,
     fullDescription,
     exstraInformation,
-    rating,
+    star,
     imagePath,
     categoryName,
   } = props;
-  const stars = drowStars(5, rating);
-
+  const stars = drowStars(5, star);
+  
   const {store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(1);
   const [productInfo, setProductInfo] = useState(fullDescription);
@@ -37,7 +37,7 @@ export function ProductDetails(props) {
     e.preventDefault();
     if (e.target.closest(".dark-btn")) {
      
-      const product = { id, quantity, name, price, discount, imagePath , discountSum,discountPrice};
+      const product = { id, quantity, productName, price, discount, imagePath , discountSum,discountPrice};
       console.log(product)
       if (store) {
         let existProduct = findProductInStore(product.id);
@@ -80,7 +80,7 @@ export function ProductDetails(props) {
           </div>
           <div className="details__main-content main-content">
             <button className="main-content__close-btn">X</button>
-            <h2 className="main-content__title">{name}</h2>
+            <h2 className="main-content__title">{productName}</h2>
             <p className="main-content__rating">{stars}</p>
             <p className="main-content__values">
               <span

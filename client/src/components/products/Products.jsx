@@ -35,6 +35,7 @@ export function Products() {
     return (price - discountSum);
   }
   let selected = allProduct ? products : products.slice(0, 8);
+  
   const loadMore = (e) => {
     if (e.target.closest(".btn")) {
       setAllProduct(!allProduct);
@@ -98,20 +99,7 @@ export function Products() {
       <div className="products__detail hidden" ref={ditail} onClick={showDetails}>
       {
           selectedProduct?
-          <ProductDetails
-            id={selectedProduct.id}
-            name={selectedProduct.productName}
-            price={selectedProduct.price}
-            discount={selectedProduct.discount}
-            discountSum={selectedProduct.discountSum}
-            discountPrice = {selectedProduct.discountPrice}
-            rating={selectedProduct.star}
-            imagePath={selectedProduct.imagePath}
-            categoryName={selectedProduct.categoryName}
-            description={selectedProduct.description}
-            fullDescription={selectedProduct.fullDescription}
-            exstraInformation={selectedProduct.exstraInformation}
-          />:null
+          <ProductDetails {...selectedProduct}/>:null
       }
       </div>
     </section>

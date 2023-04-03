@@ -13,9 +13,10 @@ export const LocalStorageContext =createContext(null);
 export function App() {
   const [store, setStore]=useState(null);
   useEffect(()=>{
-   const order = localStorage.getItem('order');
-   if(order) setStore(JSON.parse(localStorage.getItem('order')));
+    const order = localStorage.getItem('order');
+    if(order) setStore(JSON.parse(localStorage.getItem('order')));
   },[])
+
   const updateStore =()=>setStore(JSON.parse(localStorage.getItem('order')));
   const providerValue = useMemo(()=>({store, updateStore}), [store])
 
