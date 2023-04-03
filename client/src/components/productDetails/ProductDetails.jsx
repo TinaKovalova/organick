@@ -9,6 +9,8 @@ export function ProductDetails(props) {
     name,
     price,
     discount,
+    discountSum,
+    discountPrice,
     description,
     fullDescription,
     exstraInformation,
@@ -18,11 +20,15 @@ export function ProductDetails(props) {
   } = props;
   const stars = drowStars(5, rating);
 
-  const { store, updateStore } = useContext(LocalStorageContext);
+  const {store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(1);
   const [productInfo, setProductInfo] = useState(fullDescription);
+
   useEffect(()=>{
-    if(findProductInStore(id)) setQuantity(findProductInStore(id).quantity);
+    if(findProductInStore(id)) {
+      setQuantity(findProductInStore(id).quantity);
+      // refAddButton.current.style.bacground="#EFD372";
+    }
   },[id])
 
   const findProductInStore= (productId) =>store?.products.find((item) => item.id === productId);
@@ -30,7 +36,9 @@ export function ProductDetails(props) {
   const addProduct = (e) => {
     e.preventDefault();
     if (e.target.closest(".dark-btn")) {
-      const product = { id, quantity, name, price, discount };
+     
+      const product = { id, quantity, name, price, discount, imagePath , discountSum,discountPrice};
+      console.log(product)
       if (store) {
         let existProduct = findProductInStore(product.id);
         existProduct
@@ -76,13 +84,11 @@ export function ProductDetails(props) {
             <p className="main-content__rating">{stars}</p>
             <p className="main-content__values">
               <span
-                className="main-content__price"
-                style={{ textDecoration: discount ? "line-through" : "none" }}
-              >
+                className={"main-content__price" + (discountSum > 0 ? " discount":"")}>
                 ${price}
               </span>
               <span className="main-content__discount">
-                {discount ? "$" + discount : null}
+                {discountSum ? "$" + discountPrice : null}
               </span>
             </p>
             <p className="main-content__text">{description}</p>
@@ -98,7 +104,7 @@ export function ProductDetails(props) {
                 value={quantity}
                 onChange={changeQuantity}
               />
-              <Button className="dark-btn" text="Add To Car" icon />
+              <Button  className="dark-btn" text="Add To Car" icon />
             </form>
           </div>
         </div>

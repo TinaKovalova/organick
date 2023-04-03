@@ -25,6 +25,15 @@ export function Products() {
     });
   }, []);
 
+  const getDiscountSum = (price, discount)=>{
+    if(!discount) return 0;
+    return Number((discount/100).toFixed(2)) * price;
+  };
+
+  const getDiscountPrice =(price, discountSum)=>{
+    if(!discountSum) return price;
+    return (price - discountSum);
+  }
   let selected = allProduct ? products : products.slice(0, 8);
   const loadMore = (e) => {
     if (e.target.closest(".btn")) {
@@ -39,7 +48,10 @@ export function Products() {
   };
   const setSelected =(id)=>{
     const selected =products.find(product=>product.id===id);
-    setSelectedProduct(selected);
+    const discountSum= getDiscountSum(selected.price, selected.discount)
+    setSelectedProduct({...selected,
+       discountSum,
+       discountPrice:getDiscountPrice(selected.price, discountSum)});
   };
 
 
@@ -59,13 +71,16 @@ export function Products() {
               categoryName,
               imagePath,
             } = product;
+            const discountSum = getDiscountSum(price, discount);
+            const discountPrice =getDiscountPrice(price, discountSum);
             return (
               <ProductCard
                 key={id}
                 id={id}
                 name={productName}
                 price={price}
-                discount={discount}
+                discountSum={discountSum}
+                discountPrice = {discountPrice}
                 rating={star}
                 imagePath={imagePath}
                 categoryName={categoryName}
@@ -88,6 +103,8 @@ export function Products() {
             name={selectedProduct.productName}
             price={selectedProduct.price}
             discount={selectedProduct.discount}
+            discountSum={selectedProduct.discountSum}
+            discountPrice = {selectedProduct.discountPrice}
             rating={selectedProduct.star}
             imagePath={selectedProduct.imagePath}
             categoryName={selectedProduct.categoryName}

@@ -47,12 +47,13 @@
     gap: rem(7);
   }
 
-  &__price {
+  &__price.discount {
     font-size: rem(15);
     line-height: rem(20);
+    text-decoration:line-through;
     color: #b8b8b8;
   }
-  &__discount-price {
+  &__discount-price,&__price{
     font-weight: 700;
     font-size: rem(18);
     line-height: rem(25);

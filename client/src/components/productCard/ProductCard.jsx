@@ -6,7 +6,8 @@ export function ProductCard(props) {
     id,
     name,
     price,
-    discount,
+    discountSum,
+    discountPrice,
     rating,
     imagePath,
     categoryName,
@@ -22,10 +23,8 @@ export function ProductCard(props) {
       <div className="product__description">
         <p className="product__name">{name}</p>
         <div className="product__values">
-          <span className="product__price"
-          style={ { textDecoration:discount? "line-through": "none" }}
-          >${price}</span>
-          <span className="product__discount-price">{discount? '$'+ discount : null}</span>
+          <span className={"product__price"+ (discountSum ? " discount":"")}>${price}</span>
+          <span className="product__discount-price">{discountSum? '$'+ discountPrice : null}</span>
           <p className="rating">
             {stars}
           </p>

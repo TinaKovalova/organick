@@ -75,19 +75,21 @@
         @extend %main-text-style;
 
     }
-    &__price{
+    &__price.discount{
         font-weight: 600;
         font-size: rem(20);
         line-height: rem(27);
         color: #b8b8b8;
+        text-decoration: line-through;
 
     }
-    &__discount{
+    &__discount, &__price{
         font-weight: 700;
         font-size: rem(25);
         line-height: rem(34);
         color: $main-text-color;
         margin-left: rem(9);
+    
 
     }
     &__text{
@@ -120,9 +122,6 @@
         color: $main-text-color;
         border:2px solid $main-text-color;
 
-    }
-    &.dark-btn{
-        
     }
 
 }

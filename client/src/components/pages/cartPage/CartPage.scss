@@ -61,13 +61,15 @@
   &__values {
   }
 
-  &__price {
+  &__price.discount {
     font-weight: 600;
     font-size: rem(24);
     line-height: rem(28);
     color: #b8b8b8;
+    text-decoration: line-through;
   }
-  &__discount-price {
+  &__discount-price,&__price {
+    font: inherit
   }
 
   &__order-form {
