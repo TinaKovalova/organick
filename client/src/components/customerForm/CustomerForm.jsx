@@ -12,14 +12,13 @@ export function CustomerForm(props){
     const setState ={name:setFullName, email:setEmail, address:setAddress, message:setMessage, phone:setPhone};
     
     useEffect(()=>{
-      console.log({fullName,email,address, phone,message})
       const isValid =refForm.current.checkValidity();
       props.checkValidation(isValid)
       if(isValid){
           const [userName,surName ] = fullName.split(' ');
-          props.getUserInfo({userName,surName,phone,email,address})
+          props.getUserInfo({userName,surName,phone,email,address,message})
       }
-  },[fullName,email,address, phone])
+  },[fullName,email,address, phone,message])
   
     const checkFormValidation =(e)=>{
       const{name,value}=e.target;

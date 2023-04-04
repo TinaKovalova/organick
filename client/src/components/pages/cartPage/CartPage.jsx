@@ -51,40 +51,32 @@ export function CartPage() {
 
   const checkFormIsValid = (valid)=>{setIsFormValid(valid)};
 
-  const getUserInfo = ({userName,surName,phone,email,address})=>{
-    setUserInfo({userName,surName,phone,email,address});
+  const getUserInfo = ({userName,surName,phone,email,address,message})=>{
+    setUserInfo({userName,surName,phone,email,address,message});
   }
 
   const toOrder =(e)=>{
-    console.log({target: e.target})
-    console.log({isFormValid})
-   
-    if(!order)
-    {
-      setOrder(order=>!order)
+    if(!order){
+      setOrder(order=>!order);
     }else if(order && isFormValid){
-      console.log('make order...', userInfo)
       sendOrder(userInfo);
-      setOrder(order=>!order)
-      localStorage.removeItem('order')
+      setOrder(order=>!order);
+      localStorage.removeItem('order');
       updateStore();
       navigate("/thanks",{replace:true});
-
     }
-    
   }
   const sendOrder = (userInfo)=>{
     addUser(userInfo)
     .then(res =>{
-      console.log(res.data.insertId)
-      return res.data.insertId
+      return {insertId:res.data.insertId,message: userInfo.message}
      })
-     .then(newUserId=>{
+     .then(({insertId, message})=>{
       const products = store.products.map(product=>{
         const {id:productId,quantity,discountPrice:productPrice, discountSum:productDiscount}=product;
-        return ({productId,userId:newUserId,quantity,productPrice, productDiscount})
+        return ({productId,userId:insertId,quantity,productPrice, productDiscount})
       })
-      addOrder(products)
+      addOrder({products,message})
      })
       
   }
