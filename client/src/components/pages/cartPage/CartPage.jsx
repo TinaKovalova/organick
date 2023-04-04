@@ -118,7 +118,7 @@ export function CartPage() {
               
             </div>
             <Button 
-              className="dark-btn cart__btn" 
+              className={"dark-btn cart__btn" + (isFormValid ? " yellow-btn": "")}
               text={order ? "Confifm":"To order"} 
               icon
               action = {toOrder} />

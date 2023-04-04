@@ -22,16 +22,18 @@ export function ProductDetails(props) {
  
   const {store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(0);
+  const [isInCart, setIsInCart] = useState(false);
   const [productInfo, setProductInfo] = useState(fullDescription);
 
   const findProductInStore= (productId) =>store?.products.find((item) => item.id === productId);
 
   useEffect(()=>{
-    const current = findProductInStore(id)?.quantity || 1;
-    setQuantity(current);
+    const currentProduct = findProductInStore(id)
+    setQuantity(currentProduct?.quantity || 1);
+    setIsInCart(currentProduct? true :false)
+    
   },[id])
-
-
+ 
   const addProduct = (e) => {
     e.preventDefault();
     if (e.target.closest(".dark-btn")) {
@@ -103,7 +105,7 @@ export function ProductDetails(props) {
                 value={quantity}
                 onChange={changeQuantity}
               />
-              <Button  className="dark-btn" text="Add To Car" icon />
+              <Button  className={"dark-btn" + (isInCart? " yellow-btn":"")} text="Add To Car" icon />
             </form>
           </div>
         </div>
