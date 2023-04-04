@@ -1,8 +1,8 @@
 import "./ProductDetails.scss";
 import { Button } from "../button/Button";
+import { RatingPanel } from "../ratingPanel/RatingPanel";
 import { useState, useContext, useEffect } from "react";
 import { LocalStorageContext } from "../app/App";
-import { drowStars } from "../../functions";
 export function ProductDetails(props) {
   const {
     id,
@@ -18,8 +18,7 @@ export function ProductDetails(props) {
     imagePath,
     categoryName,
   } = props;
-  const stars = drowStars(5, star);
-  
+
   const {store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(1);
   const [productInfo, setProductInfo] = useState(fullDescription);
@@ -81,7 +80,9 @@ export function ProductDetails(props) {
           <div className="details__main-content main-content">
             <button className="main-content__close-btn">X</button>
             <h2 className="main-content__title">{productName}</h2>
-            <p className="main-content__rating">{stars}</p>
+            <p className="main-content__rating">
+            <RatingPanel stars={star}/>
+            </p>
             <p className="main-content__values">
               <span
                 className={"main-content__price" + (discountSum > 0 ? " discount":"")}>

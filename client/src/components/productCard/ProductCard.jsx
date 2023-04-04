@@ -1,6 +1,5 @@
 import "./ProductCard.scss";
-
-import {drowStars} from '../../functions';
+import { RatingPanel } from "../ratingPanel/RatingPanel";
 export function ProductCard(props) {
   const {
     id,
@@ -13,7 +12,6 @@ export function ProductCard(props) {
     categoryName,
     selectProduct
   } = props
-  const stars = drowStars(5,rating);
   return (
     <div className="product"
     onClick={()=>selectProduct(id)}
@@ -26,7 +24,7 @@ export function ProductCard(props) {
           <span className={"product__price"+ (discountSum ? " discount":"")}>${price}</span>
           <span className="product__discount-price">{discountSum? '$'+ discountPrice : null}</span>
           <p className="rating">
-            {stars}
+            <RatingPanel stars={rating}/>
           </p>
         </div>
       </div>
