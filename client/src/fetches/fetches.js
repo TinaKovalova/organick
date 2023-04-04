@@ -14,6 +14,5 @@ export async function addUser(user){
   return await axios.post('/user', user)
 }
  export async function addOrder(order){
-  console.log(order)
    return await axios.post('/order', order);
  }

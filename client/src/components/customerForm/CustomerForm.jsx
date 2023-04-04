@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState,useEffect } from "react";
 import './CustomerForm.scss';
 
 export function CustomerForm(props){
@@ -9,19 +9,25 @@ export function CustomerForm(props){
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
     const refForm = useRef(null);
-
+    const setState ={name:setFullName, email:setEmail, address:setAddress, message:setMessage, phone:setPhone};
+    
     useEffect(()=>{
-        const isValid =refForm.current.reportValidity();
-        props.checkValidation(isValid)
-        if(isValid){
-            const [userName,surName ] = fullName.split(' ');
-            props.getUserInfo({userName,surName,phone,email,address})
-        }
-    },[fullName,email,address, phone,message])
-
+      console.log({fullName,email,address, phone,message})
+      const isValid =refForm.current.checkValidity();
+      props.checkValidation(isValid)
+      if(isValid){
+          const [userName,surName ] = fullName.split(' ');
+          props.getUserInfo({userName,surName,phone,email,address})
+      }
+  },[fullName,email,address, phone])
+  
+    const checkFormValidation =(e)=>{
+      const{name,value}=e.target;
+      setState[name](value)
+    }
 
     return(
-        <form className="customer-form" ref={refForm} onClick={e=>e.preventDefault()}>
+        <form className="customer-form" ref={refForm} onClick={checkFormValidation}>
               <div className="customer-form__row">
                 <div className="customer-form__row-item">
                   <label htmlFor="name" className="cart__field-label">
@@ -32,10 +38,10 @@ export function CustomerForm(props){
                     name="name"
                     className="customer-form__field"
                     placeholder="Your full name"
-                    pattern="^(\w{3,})\s(\w+)$"
+                    pattern="^(\w{3,})+\s(\w+)$"
                     required
                     value={fullName}
-                    onChange={(e)=>setFullName(e.target.value)}
+                    onChange={checkFormValidation}
                   />
                 </div>
                 <div className="customer-form__row-item">
@@ -50,7 +56,7 @@ export function CustomerForm(props){
                     pattern="[a-z0-9._]+@[a-z.-]+\.[a-z]{2,}$"
                     required
                     value={email}
-                    onChange={(e)=>setEmail(e.target.value)}
+                    onChange={checkFormValidation}
                   />
                 </div>
               </div>
@@ -63,10 +69,11 @@ export function CustomerForm(props){
                     type="text"
                     name="address"
                     className="customer-form__field"
-                    pattern="^(\w{3,})\s(\w+)\s(\d+)$"//city, streetName, homeNumber
+                    placeholder="our company address"
+                    pattern="^(\w{3,})\s(\w+)\s(\d+)$"//city street Name, homeNumber
                     required
                     value={address}
-                    onChange={(e)=>setAddress(e.target.value)}
+                    onChange={checkFormValidation}
                   />
                 </div>
                 <div className="customer-form__row-item">
@@ -81,7 +88,7 @@ export function CustomerForm(props){
                     pattern="\d{10}"
                     required
                     value={phone}
-                    onChange={(e)=>setPhone(e.target.value)}
+                    onChange={checkFormValidation}
                   />
                 </div>
               </div>
@@ -91,8 +98,9 @@ export function CustomerForm(props){
                   placeholder="Some extra information"
                   className="customer-form__field message-field"
                   pattern="\w\s"
+                  name="message"
                   value={message}
-                  onChange={(e)=>setMessage(e.target.value)}
+                  onChange={checkFormValidation}
                 ></textarea>
               </label>
             </form>

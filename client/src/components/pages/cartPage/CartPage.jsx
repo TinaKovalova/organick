@@ -52,12 +52,13 @@ export function CartPage() {
   const checkFormIsValid = (valid)=>{setIsFormValid(valid)};
 
   const getUserInfo = ({userName,surName,phone,email,address})=>{
-    setUserInfo({userName,surName,phone,email,address})
-
+    setUserInfo({userName,surName,phone,email,address});
   }
 
   const toOrder =(e)=>{
     console.log({target: e.target})
+    console.log({isFormValid})
+   
     if(!order)
     {
       setOrder(order=>!order)
@@ -73,10 +74,12 @@ export function CartPage() {
     
   }
   const sendOrder = (userInfo)=>{
-    addUser(userInfo).then(res =>{
+    addUser(userInfo)
+    .then(res =>{
       console.log(res.data.insertId)
       return res.data.insertId
-     }).then(newUserId=>{
+     })
+     .then(newUserId=>{
       const products = store.products.map(product=>{
         const {id:productId,quantity,discountPrice:productPrice, discountSum:productDiscount}=product;
         return ({productId,userId:newUserId,quantity,productPrice, productDiscount})
@@ -84,10 +87,7 @@ export function CartPage() {
       addOrder(products)
      })
       
-     
   }
-
-  console.log('order', order)
 
   return (
     <section className="cart">
