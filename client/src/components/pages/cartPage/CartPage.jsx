@@ -3,24 +3,13 @@ import { ProductCardItem } from "../../../components/productCartItem/ProductCart
 import { useState, useContext, useEffect } from "react";
 import { LocalStorageContext } from "../../app/App";
 import { Button } from "../../button/Button";
+import { CustomerForm } from "../../customerForm/CustomerForm";
 
 export function CartPage() {
   const { store, updateStore } = useContext(LocalStorageContext);
+  const [order, setOrder] = useState(false);
   const [total, setTotal] = useState(null);
 
-  const findProductInStore = (productId) =>
-    store?.products.find((item) => item.id === productId);
-
-  const updateOrderQuantity = (id, quantity) => {
-    findProductInStore(id).quantity = quantity;
-    localStorage.setItem("order", JSON.stringify(store));
-    updateStore();
-  };
-  const deleteOrderProduct = (id) => {
-    const products = store?.products.filter((item) => item.id !== id);
-    localStorage.setItem("order", JSON.stringify({ products }));
-    updateStore();
-  };
   useEffect(() => {
     const totalOrderSum = store?.products.reduce(
       (total, item) => {
@@ -35,6 +24,32 @@ export function CartPage() {
     );
     setTotal(totalOrderSum);
   }, [store?.products]);
+
+
+
+  const findProductInStore = (productId) =>
+    store?.products.find((item) => item.id === productId);
+
+  const updateOrderQuantity = (id, quantity) => {
+    findProductInStore(id).quantity = quantity;
+    localStorage.setItem("order", JSON.stringify(store));
+    updateStore();
+  };
+  const deleteOrderProduct = (id) => {
+    const products = store?.products.filter((item) => item.id !== id);
+    localStorage.setItem("order", JSON.stringify({ products }));
+    updateStore();
+  };
+
+  const toOrder =()=>{
+    if(order){
+      console.log('make order...')
+    }
+    setOrder(order=>!order)
+    
+  }
+
+  console.log('order', order)
 
   return (
     <section className="cart">
@@ -65,68 +80,17 @@ export function CartPage() {
                 Discount <span className="sum">{total?.totalDiscount}$</span>
               </p>
             </div>
-            <form className="cart__customer-form customer-form hidden">
-              <div className="customer-form__row">
-                <div className="customer-form__row-item">
-                  <label htmlFor="name" className="cart__field-label">
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="customer-form__field"
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
-                <div className="customer-form__row-item">
-                  <label htmlFor="email" className="cart__field-label">
-                    Your Email*{" "}
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="customer-form__field"
-                    placeholder="example@yourmail.com"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="customer-form__row">
-                <div className="customer-form__row-item">
-                  <label htmlFor="address" className="cart__field-label">
-                    Address*
-                  </label>
-                  <input
-                    type="text"
-                    name="address"
-                    className="customer-form__field"
-                    placeholder="your company  address"
-                    required
-                  />
-                </div>
-                <div className="customer-form__row-item">
-                  <label htmlFor="phone" className="cart__field-label">
-                    Phone number*{" "}
-                  </label>
-                  <input
-                    type="text"
-                    name="phone"
-                    className="customer-form__field"
-                    placeholder="Enter your phone"
-                    required
-                  />
-                </div>
-              </div>
-              <label className="cart__field-label">
-                Message
-                <textarea
-                  placeholder="some extra information"
-                  className="customer-form__field message-field"
-                ></textarea>
-              </label>
-            </form>
-            <Button className="dark-btn cart__btn" text="To order" icon />
+            <div className="cart__customer-form" >
+              {
+                order ?<CustomerForm/> : null
+              }
+              
+            </div>
+            <Button 
+              className="dark-btn cart__btn" 
+              text={order ? "Confifm":"To order"} 
+              icon
+              action = {toOrder} />
           </div>
         </div>
       </div>
