@@ -48,7 +48,8 @@ CREATE TABLE testimonial
 CREATE TABLE `order`
 (
    id int not null primary key auto_increment,
-   `date` datetime not null
+   `date` datetime not null,
+   message varchar(100)
 );
 
 CREATE TABLE product
