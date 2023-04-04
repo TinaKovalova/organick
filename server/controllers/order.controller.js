@@ -8,9 +8,9 @@ const add = (req, res)=>{
         resolve(data)
         })
     }).then(insertedData =>{
-        const query = `insert into product_order set ?`;
-        const params = {orderId: insertedData.insertId, ...req.body};
-        db.query(query, params, (error, data)=>{
+        const query = `insert into product_order(orderId,productId,userId,quantity,productPrice, productDiscount) values ?`;
+        const params = req.body.map(item=>(Object.values({orderId: insertedData.insertId, ...item})))
+        db.query(query, [params], (error, data)=>{
             if(error) return res.send(error);
            return res.json(data);
         } )
