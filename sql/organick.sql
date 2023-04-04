@@ -10,7 +10,7 @@ CREATE TABLE category
 
 CREATE TABLE `user`
 (
-   id int not null primary key auto_increment,
+   id int not null primary key auto_increment,cd 
    userName varchar(20) not null,
    surName varchar(20) not null,
    phone varchar(10) not null,
@@ -76,7 +76,6 @@ CREATE TABLE product_order
    quantity decimal(5, 3) not null,
    productPrice decimal(5, 2) not null,
    productDiscount int,
-   productSum decimal(10, 2) not null,
    foreign key (orderId) references `order`(id),
    foreign key (productId) references product(id),
    foreign key (userId) references `user`(id)
@@ -173,7 +172,8 @@ select * from product_order;
 select * from `user`;
 select * from  `user` where phone ='0664036838';
 select * from product;
-select productid,categoryId, category.categoryName, productName, `description`,price , discount, star, imagePath from product inner join category on product.categoryId=category.id;
+
+select product.id,categoryId, category.categoryName, productName, `description`,fullDescription, exstraInformation, price , discount, star, imagePath from product inner join category on product.categoryId=category.id;
 delete from product where id=2;
 update product set categoryId="1",productName="dgd", price=25, discount=null, star=3, imagePath=null where id=1;
 
@@ -182,5 +182,7 @@ insert into `order` (`date`) values (now());
 insert into `user` set `userName` = "Ivan", `surName` = "Duda", `phone` = "0680552233", `email` = "duda@er.ua", `address` = "Kyiv";
 insert into `user` set `userName` = "Ivan2", `surName` = "Duda2", `phone` = "0680552200", `email` = "duda2@er.ua", `address` = "Kyiv2";
 insert into `user` set `userName` = "Ivan3", `surName` = "Duda3", `phone` = "0680552211", `email` = "duda3@er.ua", `address` = "Kyiv3";
-insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `quantity` = 2, `productPrice` = 10, `productDiscount` = 1, `productSum` = 3000.22;
+insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `quantity` = 2, `productPrice` = 10, `productDiscount` = 1;
+insert into product_order(orderId,productId,userId,quantity,productPrice, productDiscount) values 
+( 1, 12, 1, 2, 10, 1),( 2, 12, 1, 2, 10, 1),( 3, 12, 1, 2, 10, 1);
 
