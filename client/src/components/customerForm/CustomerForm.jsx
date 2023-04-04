@@ -1,17 +1,27 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import './CustomerForm.scss';
 
-export function CustomerForm(){
+export function CustomerForm(props){
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
-    console.log(fullName,email,address)
+    const refForm = useRef(null);
+
+    useEffect(()=>{
+        const isValid =refForm.current.reportValidity();
+        props.checkValidation(isValid)
+        if(isValid){
+            const [userName,surName ] = fullName.split(' ');
+            props.getUserInfo({userName,surName,phone,email,address})
+        }
+    },[fullName,email,address, phone,message])
+
 
     return(
-        <form className="customer-form">
+        <form className="customer-form" ref={refForm} onClick={e=>e.preventDefault()}>
               <div className="customer-form__row">
                 <div className="customer-form__row-item">
                   <label htmlFor="name" className="cart__field-label">
@@ -53,8 +63,7 @@ export function CustomerForm(){
                     type="text"
                     name="address"
                     className="customer-form__field"
-                    placeholder="Your company  address"
-                    pattern="[A-Za-z0-9'\.\-\s\,]"
+                    pattern="^(\w{3,})\s(\w+)\s(\d+)$"//city, streetName, homeNumber
                     required
                     value={address}
                     onChange={(e)=>setAddress(e.target.value)}

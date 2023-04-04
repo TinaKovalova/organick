@@ -1,14 +1,20 @@
 import "./CartPage.scss";
+import { useNavigate } from "react-router-dom";
 import { ProductCardItem } from "../../../components/productCartItem/ProductCartIem";
 import { useState, useContext, useEffect } from "react";
 import { LocalStorageContext } from "../../app/App";
 import { Button } from "../../button/Button";
 import { CustomerForm } from "../../customerForm/CustomerForm";
+import { addUser, addOrder } from "../../../fetches/fetches";
 
 export function CartPage() {
+  
   const { store, updateStore } = useContext(LocalStorageContext);
   const [order, setOrder] = useState(false);
   const [total, setTotal] = useState(null);
+  const [userInfo, setUserInfo] = useState({userName:'',surName:'',phone:'',email:'',address:''})
+  const [isFormValid, setIsFormValid] =useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const totalOrderSum = store?.products.reduce(
@@ -27,6 +33,7 @@ export function CartPage() {
 
 
 
+
   const findProductInStore = (productId) =>
     store?.products.find((item) => item.id === productId);
 
@@ -35,18 +42,49 @@ export function CartPage() {
     localStorage.setItem("order", JSON.stringify(store));
     updateStore();
   };
+
   const deleteOrderProduct = (id) => {
     const products = store?.products.filter((item) => item.id !== id);
     localStorage.setItem("order", JSON.stringify({ products }));
     updateStore();
   };
 
-  const toOrder =()=>{
-    if(order){
-      console.log('make order...')
+  const checkFormIsValid = (valid)=>{setIsFormValid(valid)};
+
+  const getUserInfo = ({userName,surName,phone,email,address})=>{
+    setUserInfo({userName,surName,phone,email,address})
+
+  }
+
+  const toOrder =(e)=>{
+    console.log({target: e.target})
+    if(!order)
+    {
+      setOrder(order=>!order)
+    }else if(order && isFormValid){
+      console.log('make order...', userInfo)
+      sendOrder(userInfo);
+      setOrder(order=>!order)
+      localStorage.removeItem('order')
+      updateStore();
+      navigate("/thanks",{replace:true});
+
     }
-    setOrder(order=>!order)
     
+  }
+  const sendOrder = (userInfo)=>{
+    addUser(userInfo).then(res =>{
+      console.log(res.data.insertId)
+      return res.data.insertId
+     }).then(newUserId=>{
+      const products = store.products.map(product=>{
+        const {id:productId,quantity,discountPrice:productPrice, discountSum:productDiscount}=product;
+        return ({productId,userId:newUserId,quantity,productPrice, productDiscount})
+      })
+      addOrder(products)
+     })
+      
+     
   }
 
   console.log('order', order)
@@ -82,7 +120,11 @@ export function CartPage() {
             </div>
             <div className="cart__customer-form" >
               {
-                order ?<CustomerForm/> : null
+                order 
+                ?<CustomerForm 
+                checkValidation={checkFormIsValid}
+                getUserInfo={getUserInfo} /> 
+                : null
               }
               
             </div>
