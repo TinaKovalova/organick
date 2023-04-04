@@ -31,9 +31,6 @@ export function CartPage() {
     setTotal(totalOrderSum);
   }, [store?.products]);
 
-
-
-
   const findProductInStore = (productId) =>
     store?.products.find((item) => item.id === productId);
 

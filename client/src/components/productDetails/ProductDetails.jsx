@@ -19,25 +19,23 @@ export function ProductDetails(props) {
     categoryName,
   } = props;
 
+ 
   const {store, updateStore } = useContext(LocalStorageContext);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
   const [productInfo, setProductInfo] = useState(fullDescription);
 
+  const findProductInStore= (productId) =>store?.products.find((item) => item.id === productId);
+
   useEffect(()=>{
-    if(findProductInStore(id)) {
-      setQuantity(findProductInStore(id).quantity);
-      // refAddButton.current.style.bacground="#EFD372";
-    }
+    const current = findProductInStore(id)?.quantity || 1;
+    setQuantity(current);
   },[id])
 
-  const findProductInStore= (productId) =>store?.products.find((item) => item.id === productId);
 
   const addProduct = (e) => {
     e.preventDefault();
     if (e.target.closest(".dark-btn")) {
-     
       const product = { id, quantity, productName, price, discount, imagePath , discountSum,discountPrice};
-      console.log(product)
       if (store) {
         let existProduct = findProductInStore(product.id);
         existProduct

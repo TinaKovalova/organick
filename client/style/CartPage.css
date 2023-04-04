@@ -1,4 +1,4 @@
-.cart .customer-form, .cart__total-block, .cart__close-btn, .cart__order-form, .cart__product-name, .cart__title, .cart {
+.cart__total-block, .cart__close-btn, .cart__order-form, .cart__product-name, .cart__title, .cart {
   font-family: "Roboto", sans-serif;
   color: #274c5b;
 }
@@ -7,7 +7,7 @@
 /*>=768 Small screens, laptop*/
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
-.cart .customer-form, .cart__total-block, .cart__close-btn, .cart__order-form, .cart__product-name, .cart__title, .cart {
+.cart__total-block, .cart__close-btn, .cart__order-form, .cart__product-name, .cart__title, .cart {
   font-family: "Roboto", sans-serif;
   color: #274c5b;
 }
@@ -98,11 +98,15 @@
   font-weight: 700;
   line-height: 2.875rem;
 }
-.cart__price {
+.cart__price.discount {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #b8b8b8;
+  text-decoration: line-through;
+}
+.cart__discount-price, .cart__price {
+  font: inherit;
 }
 .cart__order-form {
   font-size: 2rem;
@@ -165,68 +169,6 @@
 }
 .cart__total-diacount {
   margin-top: 2rem;
-}
-.cart .customer-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 3.125rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  line-height: 1.3125rem;
-  width: 74rem;
-  margin: 6.5rem 5.375rem 2.375rem 8.125rem;
-}
-.cart .customer-form__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2.875rem;
-}
-.cart .customer-form__row-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 1.625rem;
-  width: 48.0574324324%;
-}
-.cart .customer-form__field {
-  border-radius: 1rem;
-  border: 1px solid #7eb693;
-  padding: 1.75rem 1.4375rem 1.9375rem;
-}
-.cart .customer-form__field::-webkit-input-placeholder {
-  font-style: italic;
-  color: #ababab;
-}
-.cart .customer-form__field::-moz-placeholder {
-  font-style: italic;
-  color: #ababab;
-}
-.cart .customer-form__field:-ms-input-placeholder {
-  font-style: italic;
-  color: #ababab;
-}
-.cart .customer-form__field::-ms-input-placeholder {
-  font-style: italic;
-  color: #ababab;
-}
-.cart .customer-form__field::placeholder {
-  font-style: italic;
-  color: #ababab;
-}
-.cart .customer-form .message-field {
-  margin-top: 1.625rem;
-  width: 100%;
-  min-height: 15.4375rem;
 }
 .cart__btn {
   margin-top: 4.75rem;

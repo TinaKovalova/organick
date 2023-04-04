@@ -109,13 +109,14 @@
   height: 1.1875rem;
   margin: 0.5625rem 0;
 }
-.details .main-content__price {
+.details .main-content__price.discount {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.6875rem;
   color: #b8b8b8;
+  text-decoration: line-through;
 }
-.details .main-content__discount {
+.details .main-content__discount, .details .main-content__price {
   font-weight: 700;
   font-size: 1.5625rem;
   line-height: 2.125rem;

@@ -10,7 +10,7 @@ CREATE TABLE category
 
 CREATE TABLE `user`
 (
-   id int not null primary key auto_increment,cd 
+   id int not null primary key auto_increment,
    userName varchar(20) not null,
    surName varchar(20) not null,
    phone varchar(10) not null,
@@ -186,4 +186,4 @@ insert into `user` set `userName` = "Ivan3", `surName` = "Duda3", `phone` = "068
 insert into product_order set `orderId` = 1, `productId` = 12, `userId` = 1, `quantity` = 2, `productPrice` = 10, `productDiscount` = 1;
 insert into product_order(orderId,productId,userId,quantity,productPrice, productDiscount) values 
 ( 1, 12, 1, 2, 10, 1),( 2, 12, 1, 2, 10, 1),( 3, 12, 1, 2, 10, 1);
-
+insert into `order` set `date` = now(), `message`="gog";
