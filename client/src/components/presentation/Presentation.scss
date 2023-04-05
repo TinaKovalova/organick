@@ -7,8 +7,8 @@
     align-items: center;
     background-color:  #D3CBCF;
     background:
-     url('../../assets/presentation/Background1.svg')100%/100% no-repeat,
-     url('../../assets/presentation/background.png') 100%/100% no-repeat ;
+     url('../../assets/presentation/Background1.svg')center/cover no-repeat,
+     url('../../assets/presentation/background.png')center/cover no-repeat ;
 
     &__container{
         @include main-container();
@@ -16,7 +16,7 @@
         align-items: center;
     }
     &__content{
-       flex: 0 1 vw(530);
+       flex: 0 1 rem(530);
     }
     &__subtitle{
         @extend %subtitle-text-style;

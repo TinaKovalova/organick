@@ -18,7 +18,7 @@
 /*<=480 mobile*/
 .header {
   width: 100%;
-  height: 10.625vw;
+  min-height: 10.625vw;
   padding: 3.90625vw 8.4375%;
   background-color: rgba(255, 255, 255, 0.9);
   display: -webkit-box;

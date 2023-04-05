@@ -27,10 +27,11 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .sale-card {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 35.5208333333vw;
-          flex: 0 1 35.5208333333vw;
-  min-width: 21.3125rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 35.5208333333vw;
+          flex: 1 1 35.5208333333vw;
+  min-width: 25rem;
+  max-width: 42.625rem;
   min-height: 22.9375rem;
   padding: 3.4375rem;
   display: -webkit-box;
@@ -40,6 +41,8 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 1.875rem;
+  background-position-x: right;
+  background-position-y: top;
   background-size: cover;
   background-repeat: no-repeat;
 }

@@ -4,7 +4,7 @@
     $header-container-width:$max-width - $header-padding-lr*2;
     @extend %title-text-style;
     width: 100%;
-    height:vw(204);
+    min-height:vw(204);
     padding: vw(75) percent($header-padding-lr, $max-width);
     background-color: rgba(255, 255, 255, 0.9);
     display:flex ;

@@ -36,10 +36,10 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #D3CBCF;
-  background: url("../../assets/presentation/Background1.svg") 100%/100% no-repeat, url("../../assets/presentation/background.png") 100%/100% no-repeat;
+  background: url("../../assets/presentation/Background1.svg") center/cover no-repeat, url("../../assets/presentation/background.png") center/cover no-repeat;
 }
 .presentation__container {
-  width: 73.9583333333vw;
+  width: 75vw;
   padding: 0 0.625em;
   margin: 0 auto;
   display: -webkit-box;
@@ -51,8 +51,8 @@
 }
 .presentation__content {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 27.6041666667vw;
-          flex: 0 1 27.6041666667vw;
+      -ms-flex: 0 1 33.125rem;
+          flex: 0 1 33.125rem;
 }
 .presentation__subtitle {
   font-size: 2.25rem;

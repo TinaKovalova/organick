@@ -9,17 +9,24 @@
 .sale {
   width: 100%;
   min-height: 44.4375rem;
-  padding: 9.625rem 11.875rem 0;
+  padding: 9.625rem 0 11.875rem;
 }
 .sale__container {
-  width: 73.9583333333vw;
+  width: 75vw;
   padding: 0 0.625em;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  row-gap: 2.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.25rem;
+}
+@media (max-width: 991.98px) {
+  .sale__container {
+    width: 100%;
+  }
 }

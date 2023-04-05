@@ -18,6 +18,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+:nth-child(2) .App {
+  margin-top: 12.75rem;
+}
 .App .main {
   width: 100%;
   -webkit-box-flex: 1;
