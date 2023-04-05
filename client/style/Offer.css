@@ -30,7 +30,7 @@
   width: 100%;
   min-height: 65.625rem;
   background-color: #274c5b;
-  padding: 12.5625rem 12.5rem 0;
+  padding: 12.5625rem 0 12.5rem;
 }
 .offer__container {
   width: 75vw;
@@ -53,5 +53,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1.25rem;
 }

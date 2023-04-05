@@ -7,7 +7,10 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .gallery-card {
-  width: 31.875vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 38.25rem;
+          flex: 0 1 38.25rem;
+  min-width: 19.75rem;
   height: 30.3645833333vw;
   display: -webkit-box;
   display: -ms-flexbox;

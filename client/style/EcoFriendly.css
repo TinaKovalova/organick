@@ -37,7 +37,7 @@
 .eco-friendly {
   width: 100%;
   min-height: 58.1875rem;
-  padding: 6.25rem 6.75rem 0;
+  padding: 6.25rem 0 6.75rem;
   background: url("../../assets/eco/field.png") 0 0/auto 100% no-repeat;
 }
 .eco-friendly__container {
@@ -49,9 +49,11 @@
   display: flex;
 }
 .eco-friendly__content {
-  width: 41.09375vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 49.3125rem;
+          flex: 0 1 49.3125rem;
   min-height: 45.1875rem;
-  padding: 4.875rem 4.5rem 4.8125rem 5.5625rem;
+  padding: 4.0625vw 3.75vw 4.0104166667vw 4.6354166667vw;
   margin-left: auto;
   border-radius: 1.875rem;
   background-color: #ffffff;

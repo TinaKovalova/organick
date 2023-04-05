@@ -3,7 +3,7 @@
     width: 100%;
     min-height: rem(1050);
     background-color: $main-text-color;
-    padding: rem(201) rem(200)0 ;
+    padding: rem(201) 0  rem(200) ;
     &__container{
         @include main-container();
     }
@@ -24,6 +24,8 @@
     &__content{
         margin-top: rem(50);
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: rem(20);
     }
 }

@@ -2,16 +2,16 @@
 .eco-friendly {
   width: 100%;
   min-height: rem(931);
-  padding: rem(100) rem(108) 0;
+  padding: rem(100) 0  rem(108);
   background: url("../../assets/eco/field.png") 0 0 / auto 100% no-repeat;
   &__container {
     @include main-container();
     display: flex;
   }
   &__content {
-    width: vw(789);
+    flex: 0 1 rem(789);
     min-height: rem(723);
-    padding: rem(78) rem(72) rem(77) rem(89);
+    padding: vw(78) vw(72) vw(77) vw(89);
     margin-left: auto;
     border-radius: rem(30);
     background-color: #ffffff;
