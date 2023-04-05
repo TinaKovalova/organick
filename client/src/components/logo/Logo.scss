@@ -1,26 +1,24 @@
-@import '../../styles/variables', '../../styles/functions' ;
+@import "../../styles/variables", "../../styles/functions";
 
-.header__logo{
-   
+.header__logo {
 }
-.logo{ 
+.logo {
+  height: rem(54);
+  display: flex;
+  align-items: center;
+  &__img {
+    width: rem(37);
     height: rem(54);
-    display: flex;
-    align-items: center;
-    &__img{
-       width: rem(37);
-       height: rem(54);
-       background-image: url('../../assets/header//logo.png');
-       background-size: 100% 100%;
-       display: inline-block;
-    }
-    &__text{
-        @extend %title-text-style;
-        margin-left: rem(8);
-        color: $main-text-color;
-        font-weight: 700;
-        font-size: rem(38);
-        line-height:1em;
-
-    }
+    background-image: url("../../assets/header//logo.png");
+    background-size: 100% 100%;
+    display: inline-block;
+  }
+  &__text {
+    @extend %title-text-style;
+    margin-left: rem(8);
+    color: $main-text-color;
+    font-weight: 700;
+    font-size: rem(38);
+    line-height: 1em;
+  }
 }

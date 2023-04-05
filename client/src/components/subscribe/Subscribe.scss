@@ -22,8 +22,8 @@
     // max-width: percent(357, $container-width - 142);
     color: #ffffff;
   }
-  @media (max-width:600px){
-    &__container{
+  @media (max-width: 600px) {
+    &__container {
       padding: rem(35) rem(35);
     }
   }

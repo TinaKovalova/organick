@@ -1,22 +1,21 @@
-@import '../../styles/variables', '../../styles/functions' ;
+@import "../../styles/variables", "../../styles/functions";
 
-.header__navigation{
-    height: rem(23);
+.header__navigation {
+  height: rem(23);
 }
-.navigation{
-    flex-shrink: 1;
-    font-weight: 700;
-    font-size: rem(20);
-    line-height: 1em;
-    &__list{
-        list-style: none;
-        display: flex;
-       
-    }
-    &__item:nth-child(n+2){
-        margin-left: vw(42);
-    }
-    &__item{
-        text-transform: capitalize;
-    }
+.navigation {
+  flex-shrink: 1;
+  font-weight: 700;
+  font-size: rem(20);
+  line-height: 1em;
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+  &__item:nth-child(n + 2) {
+    margin-left: vw(42);
+  }
+  &__item {
+    text-transform: capitalize;
+  }
 }

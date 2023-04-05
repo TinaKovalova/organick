@@ -1,58 +1,57 @@
 @import "../../styles/variables", "../../styles/functions";
 .customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: vw(50);
+  @include titleStyle(600, 18, 21);
+  width: vw(1184);
+
+  &__row {
+    display: flex;
+    gap: vw(46);
+  }
+  &__row-item {
     display: flex;
     flex-direction: column;
-    gap: vw(50);
-    @include titleStyle(600, 18, 21);
-    width: vw(1184);
+    row-gap: vw(26);
+    width: percent(569, 1184);
+  }
 
-    &__row {
-      display: flex;
-      gap: vw(46);
-    }
-    &__row-item {
-      display: flex;
-      flex-direction: column;
-      row-gap: vw(26);
-      width: percent(569, 1184);
-    }
-  
-    &__field {
-      border-radius: vw(16);
-      border: 1px solid  #7eb693;
-      padding: vw(28) vw(23) vw(31);
+  &__field {
+    border-radius: vw(16);
+    border: 1px solid #7eb693;
+    padding: vw(28) vw(23) vw(31);
 
-      &:focus:not(:placeholder-shown),&:focus{
-        box-shadow: #7eb693 0px 2px 5px 0px;
-      }
-      &:not(:focus):placeholder-shown{
-        border-color: #7eb693;
-      }
+    &:focus:not(:placeholder-shown),
+    &:focus {
+      box-shadow: #7eb693 0px 2px 5px 0px;
+    }
+    &:not(:focus):placeholder-shown {
+      border-color: #7eb693;
+    }
 
-      &:not(:focus):not(:placeholder-shown):invalid{
-        border-color:  #ec5a5a;
-      }
-      &:not(:focus):not(:placeholder-shown):valid {
-        border-color: #7eb693;
-      }
- 
-     
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: #ec5a5a;
     }
-    &__field::placeholder {
-      font-style: italic;
-      color: #ababab;
-    }
-    .message-field {
-      margin-top: vw(26);
-      width: 100%;
-      min-height: vw(247);
-    }
-    @include tablet() {
-      &__row-item {
-        width: 100%;
-      }
-      &__row{
-        flex-wrap: wrap;
-      }
+    &:not(:focus):not(:placeholder-shown):valid {
+      border-color: #7eb693;
     }
   }
+  &__field::placeholder {
+    font-style: italic;
+    color: #ababab;
+  }
+  .message-field {
+    margin-top: vw(26);
+    width: 100%;
+    min-height: vw(247);
+  }
+  @include tablet() {
+    &__row-item {
+      width: 100%;
+    }
+    &__row {
+      flex-wrap: wrap;
+    }
+  }
+}

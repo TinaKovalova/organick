@@ -16,7 +16,7 @@
     padding: rem(28) rem(31) rem(23);
     color: #ababab;
   }
- 
+
   @include laptop() {
     flex-wrap: wrap;
     justify-content: center;
@@ -24,5 +24,4 @@
       width: 100%;
     }
   }
-  
 }

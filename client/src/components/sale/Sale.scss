@@ -3,7 +3,7 @@
 .sale {
   width: 100%;
   min-height: rem(711);
-  padding: rem(154) 0  rem(190);
+  padding: rem(154) 0 rem(190);
   &__container {
     @include main-container();
     display: flex;
@@ -12,8 +12,8 @@
     gap: rem(36);
   }
   @include laptop() {
-    &__container{
-      width:100%;
+    &__container {
+      width: 100%;
     }
   }
 }

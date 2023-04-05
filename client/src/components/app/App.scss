@@ -1,18 +1,15 @@
-@import '../../styles/variables', '../../styles/functions' ;
-.App{
-    min-height: 100vh;
-    padding-top:20;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    :nth-child(2) &{
-        margin-top: rem(204);
-    }
-    .main{
-        width: 100%;
-        flex: 1 1 auto;
-    }
-    // &.lock{
-    //     overflow: hidden;
-    //    }
+@import "../../styles/variables", "../../styles/functions";
+.App {
+  min-height: 100vh;
+  padding-top: 20;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  :nth-child(2) & {
+    margin-top: rem(204);
+  }
+  .main {
+    width: 100%;
+    flex: 1 1 auto;
+  }
 }

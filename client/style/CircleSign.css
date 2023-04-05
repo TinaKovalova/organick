@@ -22,7 +22,7 @@
   height: 9.84375vw;
   min-height: 7.5rem;
   border-radius: 50%;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +44,7 @@
   width: 110%;
   height: 110%;
   border-radius: 50%;
-  border: 0.125rem solid #7EB693;
+  border: 0.125rem solid #7eb693;
   position: absolute;
   top: -5%;
   left: -5%;

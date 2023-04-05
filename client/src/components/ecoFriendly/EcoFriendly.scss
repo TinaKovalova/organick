@@ -2,7 +2,7 @@
 .eco-friendly {
   width: 100%;
   min-height: rem(931);
-  padding: rem(100) 0  rem(108);
+  padding: rem(100) 0 rem(108);
   background: url("../../assets/eco/field.png") 0 0 / auto 100% no-repeat;
   &__container {
     @include main-container();

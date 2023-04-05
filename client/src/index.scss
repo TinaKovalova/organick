@@ -1,7 +1,7 @@
-@import 'styles/_fonts','styles/_variables';
-@import '../node_modules/scss-reset/_reset.scss';
-*{
-    box-sizing: border-box;
+@import "styles/_fonts", "styles/_variables";
+@import "../node_modules/scss-reset/_reset.scss";
+* {
+  box-sizing: border-box;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -16,22 +16,20 @@ input:-webkit-autofill:active {
   transition: background-color 9999s ease-in-out 0s;
 }
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
-body{
-    @extend %main-text-style;
-    font-weight: 400;
-    font-size: rem(18);
-    line-height: em(30);
-    color: $text-color;
-    .hidden{
-      visibility: hidden;
-
- }
- 
+body {
+  @extend %main-text-style;
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: em(30);
+  color: $text-color;
+  .hidden {
+    visibility: hidden;
+  }
 }

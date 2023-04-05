@@ -1,21 +1,19 @@
 @import "../../../styles/variables", "../../../styles/functions";
-.thanks{
-    width: 100%;
-    height: auto;
-    padding-bottom: rem(269);
-    &__title{
-        margin-top: rem(94);
-        @include titleStyle(800, 70,82);
-        text-align:center;
-        &::first-letter{
-        text-transform: uppercase;
-       }
+.thanks {
+  width: 100%;
+  height: vw(939);
+  min-height: rem(500);
+  padding: vw(94) vw(150) vw(269);
+  background-clip: padding-box;
+  background: url("../../../assets/thanks/Background.png") no-repeat;
+  background-position: left rem(220);
+  background-size: 100% auto;
+  &__title {
+    @include titleStyle(800, 70, 82);
+    font-size: clamp(2.5rem, vw(70), 5rem);
+    text-align: center;
+    &::first-letter {
+      text-transform: uppercase;
     }
-
-    &__image{
-        margin-top: rem(44);
-        height: vw(450);
-        background: url('../../../assets/thanks/Background.png') center/cover no-repeat;
-
-    }
+  }
 }

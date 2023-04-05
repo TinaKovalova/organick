@@ -8,13 +8,12 @@
   flex-direction: column;
   align-items: center;
   @extend %main-text-style;
-  
+
   &__container {
     @include main-container();
     min-height: rem(336);
     display: flex;
     gap: vw(92);
-    
   }
   .contacts {
     flex: 0 1 vw(285);
@@ -53,14 +52,14 @@
       height: 100%;
       width: 1px;
       position: absolute;
-      background-color:$dark-gray ;
+      background-color: $dark-gray;
       top: 0;
     }
-    &::before{
-        left: rem(-41);
+    &::before {
+      left: rem(-41);
     }
-    &::after{
-        right: rem(-41);
+    &::after {
+      right: rem(-41);
     }
     .widgets {
       display: flex;
@@ -126,19 +125,17 @@
     min-height: rem(47);
     text-align: center;
 
-    .bold-text{
-        font-weight: 700;
+    .bold-text {
+      font-weight: 700;
     }
   }
-  @include laptop(){
-    &__container{
-     flex-wrap: wrap;
-     justify-content: center;
+  @include laptop() {
+    &__container {
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    &__informer{
-        order: -1;
+    &__informer {
+      order: -1;
     }
-
-  } 
-  
+  }
 }

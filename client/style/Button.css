@@ -33,20 +33,20 @@
 }
 
 .bright-btn.btn {
-  background-color: #EFD372;
+  background-color: #efd372;
 }
 
 .dark-btn.btn {
   background-color: #274c5b;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .white-btn.btn {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 1.25rem;
 }
 
 .yellow-btn.btn {
-  background-color: #EFD372;
-  color: #FFFFFF;
+  background-color: #efd372;
+  color: #ffffff;
 }

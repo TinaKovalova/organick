@@ -19,13 +19,13 @@
   padding: 0 em($container-padding);
   margin: 0 auto;
 }
-@mixin subtitleStyle($fontWeight:400, $fontSize : 36,$lineHeight:49){
+@mixin subtitleStyle($fontWeight: 400, $fontSize: 36, $lineHeight: 49) {
   @extend %subtitle-text-style;
   font-size: rem($fontSize);
   font-weight: $fontWeight;
   line-height: rem($lineHeight);
 }
-@mixin titleStyle($fontWeight:800, $fontSize : 50, $lineHeight:59){
+@mixin titleStyle($fontWeight: 800, $fontSize: 50, $lineHeight: 59) {
   @extend %title-text-style;
   font-size: rem($fontSize);
   font-weight: $fontWeight;

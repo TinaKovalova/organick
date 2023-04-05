@@ -35,7 +35,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #D3CBCF;
+  background-color: #d3cbcf;
   background: url("../../assets/presentation/Background1.svg") center/cover no-repeat, url("../../assets/presentation/background.png") center/cover no-repeat;
 }
 .presentation__container {

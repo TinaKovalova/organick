@@ -9,8 +9,8 @@ $subtitle-color: #68a47f;
 $dark-gray: #d4d4d4;
 $white-smoke: #f9f8f8;
 $light-green: #eff6f1;
-$yellow-btn:#EFD372;
-$star-color:#FFA858;
+$yellow-btn: #efd372;
+$star-color: #ffa858;
 
 %main-text-style {
   font-family: "Open Sans", sans-serif;
@@ -24,7 +24,7 @@ $star-color:#FFA858;
   color: $subtitle-color;
 }
 
-$breakpoint-desktop:($container-width)px; /*>=992 Desktop, large screens*/
+$breakpoint-desktop: ($container-width) px; /*>=992 Desktop, large screens*/
 $breakpoint-laptop: 991.98px; /*>=768 Small screens, laptop*/
 $breakpoint-tablet: 767.98px; /*>=480 Ipads, Tablets*/
 $breakpoint-mobile: 479.98px; /*<=480 mobile*/

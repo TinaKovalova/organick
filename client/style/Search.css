@@ -17,13 +17,13 @@
   height: 100%;
   border-radius: 2.25rem;
   border-style: none;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 .search-panel__btn {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background: #7EB693 url("../../assets//header/search-icon.svg") center no-repeat;
+  background: #7eb693 url("../../assets//header/search-icon.svg") center no-repeat;
   position: absolute;
   right: 0.375rem;
   top: 0.3125rem;

@@ -18,21 +18,21 @@
 /*<=480 mobile*/
 .thanks {
   width: 100%;
-  height: auto;
-  padding-bottom: 16.8125rem;
+  height: 48.90625vw;
+  min-height: 31.25rem;
+  padding: 4.8958333333vw 7.8125vw 14.0104166667vw;
+  background-clip: padding-box;
+  background: url("../../../assets/thanks/Background.png") no-repeat;
+  background-position: left 13.75rem;
+  background-size: 100% auto;
 }
 .thanks__title {
-  margin-top: 5.875rem;
   font-size: 4.375rem;
   font-weight: 800;
   line-height: 5.125rem;
+  font-size: clamp(2.5rem, 3.6458333333vw, 5rem);
   text-align: center;
 }
 .thanks__title::first-letter {
   text-transform: uppercase;
-}
-.thanks__image {
-  margin-top: 2.75rem;
-  height: 23.4375vw;
-  background: url("../../../assets/thanks/Background.png") center/cover no-repeat;
 }

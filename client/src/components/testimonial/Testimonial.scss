@@ -13,9 +13,9 @@
   }
   &__subtitle {
     @include subtitleStyle();
-    
   }
-  &__subtitle, &__title{
+  &__subtitle,
+  &__title {
     text-transform: capitalize;
     text-align: center;
   }
@@ -46,11 +46,10 @@
       left: 0;
     }
   }
-  @include laptop(){
-
-     &__stat{
+  @include laptop() {
+    &__stat {
       flex-wrap: wrap;
       justify-content: center;
-     } 
+    }
   }
 }

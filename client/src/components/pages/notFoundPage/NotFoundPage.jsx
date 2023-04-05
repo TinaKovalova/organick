@@ -18,14 +18,15 @@ export function NotFoundPage() {
           <p className="not-found__text">
             the page you are looking for doesn't exist or has been moved
           </p>
-        </div>
-        <div className="not-found__actions" onClick={redirectTo}>
+          <div className="not-found__actions" onClick={redirectTo}>
           <Button
             text="Go to Homepage"
             icon
             className="dark-btn not-found__btn"
           />
         </div>
+        </div>
+        
       </div>
     </section>
   );

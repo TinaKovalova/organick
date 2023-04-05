@@ -45,7 +45,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap:vw(15);
+    gap: vw(15);
   }
   &__order-image {
     display: block;
@@ -62,29 +62,29 @@
   &__product-name {
     @include titleStyle(700, 40, 46);
     @extend %title-text-style;
-    font-size:clamp(1.5rem, vw(40), 2.5rem);
+    font-size: clamp(1.5rem, vw(40), 2.5rem);
     font-weight: 700;
     line-height: 1.2em;
-    & span{
+    & span {
       margin-left: vw(10);
     }
   }
-  
 
   &__price.discount {
     font-weight: 600;
-    font-size:clamp(1rem, vw(24), 1.5rem);
+    font-size: clamp(1rem, vw(24), 1.5rem);
     line-height: 1.2em;
     color: #b8b8b8;
     text-decoration: line-through;
   }
-  &__discount-price,&__price {
-    font: inherit
+  &__discount-price,
+  &__price {
+    font: inherit;
   }
 
   &__order-form {
     @extend %title-text-style;
-    font-size:clamp(0.8rem, vw(32), 2.5rem);
+    font-size: clamp(0.8rem, vw(32), 2.5rem);
     font-weight: 700;
     line-height: 1.2em;
 
@@ -134,14 +134,14 @@
     min-width: vw(278);
     align-self: flex-end;
     @extend %title-text-style;
-    font-size:clamp(1.5rem, vw(40), 2.5rem);
+    font-size: clamp(1.5rem, vw(40), 2.5rem);
     font-weight: 700;
     line-height: 0.7em;
     .sum {
       display: block;
       float: right;
     }
-    & span{
+    & span {
       margin-left: vw(25);
     }
   }
@@ -154,26 +154,24 @@
     padding: vw(104) vw(86) vw(38) vw(130);
   }
 
-
   &__btn {
     margin-top: vw(76);
     align-self: center;
   }
-  
+
   @include tablet() {
-    &__order-image{
+    &__order-image {
       display: none;
     }
-    &__close-btn{
+    &__close-btn {
       top: 0;
       right: vw(-137);
     }
   }
-@media (max-width:600px){
-    &__close-btn{
+  @media (max-width: 600px) {
+    &__close-btn {
       top: -5%;
       right: vw(-207);
     }
   }
-
 }

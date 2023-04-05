@@ -2,7 +2,8 @@
 
 .not-found {
   width: 100%;
-  min-height: vw(898);
+  height: vw(898);
+  min-height: rem(700);
   background-color: #bbc9c9;
   background: url("../../../assets/notFound/background.png") center/cover
     no-repeat;
@@ -13,25 +14,30 @@
   &__container {
     @include main-container();
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   &__content {
-    width: vw($content-width);
-    min-height: vw(354);
+    flex: 0 1 rem(533);
+    min-width: rem(235);
+    min-height: rem(354);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   &__image {
-    width: percent(502, $content-width);
-    height: vw(219);
+    width: rem(502);
+    min-width: rem(250);
+    height: rem(219);
     background: url("../../../assets/notFound/404.svg") center/cover no-repeat;
   }
   &__title {
-    @include titleStyle(800, 70, 82);
+    @extend %title-text-style;
+    font-weight: 800;
+    font-size: clamp(2rem, vw(70), 5rem);
+    line-height: 1.2em;
     text-align: center;
     &::first-letter {
       text-transform: uppercase;
@@ -39,18 +45,44 @@
   }
   &__text {
     @extend %main-text-style;
-    font-size: rem(18);
+    font-size: clamp(1rem, vw(18), 1.2rem);
+    line-height: 1.66em;
     font-weight: 600;
-    line-height: rem(30);
+    text-align: center;
+
     &::first-letter {
       text-transform: uppercase;
     }
   }
   &__actions {
-    margin-top: vw(40);
+    margin-top: rem(40);
     width: vw($content-width);
   }
   &__btn {
-    width: vw(275);
+    width: rem(275);
+  }
+  @include tablet() {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("../../../assets/notFound/background.png") center/cover no-repeat;
+    &__btn {
+      width: rem(235);
+    }
+  }
+  @media (max-width: 600px) {
+    &__container {
+      width: 100%;
+      justify-content: center;
+    }
+    &__actions {
+      width: 50%;
+    }
+    &__image {
+      width: rem(350);
+      height: rem(180);
+      background-size: 100%;
+    }
   }
 }
