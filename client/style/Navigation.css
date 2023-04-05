@@ -7,11 +7,12 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .header__navigation {
-  width: 29.375vw;
   height: 1.4375rem;
 }
 
 .navigation {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1em;
@@ -21,7 +22,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.625rem;
+}
+.navigation__item:nth-child(n+2) {
+  margin-left: 2.1875vw;
 }
 .navigation__item {
   text-transform: capitalize;

@@ -4,10 +4,8 @@
    
 }
 .logo{ 
-    width: rem(199);
     height: rem(54);
     display: flex;
-    gap: rem(8);
     align-items: center;
     &__img{
        width: rem(37);
@@ -18,6 +16,7 @@
     }
     &__text{
         @extend %title-text-style;
+        margin-left: rem(8);
         color: $main-text-color;
         font-weight: 700;
         font-size: rem(38);

@@ -8,7 +8,6 @@ export function ProductDetails(props) {
     id,
     productName,
     price,
-    discount,
     discountSum,
     discountPrice,
     description,
@@ -19,7 +18,7 @@ export function ProductDetails(props) {
     categoryName,
   } = props;
 
- 
+
   const {store, updateStore } = useContext(LocalStorageContext);
   const [quantity, setQuantity] = useState(0);
   const [isInCart, setIsInCart] = useState(false);
@@ -37,7 +36,7 @@ export function ProductDetails(props) {
   const addProduct = (e) => {
     e.preventDefault();
     if (e.target.closest(".dark-btn")) {
-      const product = { id, quantity, productName, price, discount, imagePath , discountSum,discountPrice};
+      const product = { id, quantity, productName, price, imagePath , discountSum,discountPrice};
       if (store) {
         let existProduct = findProductInStore(product.id);
         existProduct

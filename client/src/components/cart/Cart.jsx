@@ -20,10 +20,10 @@ export function Cart() {
 
 
   return (
-    <div className="header__cart cart">
-      <Link to="cart" className="cart__link">
-        <div className="cart__icon"></div>
-        <p className="cart__lable"> Cart 
+    <div className="header__cart header-cart">
+      <Link to="cart" className="header-cart__link">
+        <div className="header-cart__icon"></div>
+        <p className="header-cart__lable"> Cart 
         <span ref={refLable}>({count})</span></p>
       </Link>
     </div>

@@ -6,30 +6,30 @@
 /*>=768 Small screens, laptop*/
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
-.cart {
-  width: 8.28125vw;
+.header-cart {
+  min-width: 8.125rem;
   height: 4.125rem;
   border-radius: 2.0625rem;
   border: 0.0625rem solid #E0E0E0;
   padding: 0.25rem 0.3125rem;
   color: #274c5b;
 }
-.cart__link {
+.header-cart__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.75rem;
 }
-.cart__icon {
+.header-cart__icon {
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
   background: #274c5b url("../../assets/header/cart-icon.svg") 45% no-repeat;
 }
-.cart__lable {
+.header-cart__lable {
+  margin-left: 0.75rem;
   font-weight: 600;
   line-height: 1.3125em;
 }

@@ -3,7 +3,7 @@ import { Button } from "../button/Button";
 
 export function Presentation() {
   return (
-    <section className="presentation">
+    <section className="presentation" id="presentation">
       <div className="presentation__container">
         <div className="presentation__content ">
           <p className="presentation__subtitle">100% Natural Food</p>

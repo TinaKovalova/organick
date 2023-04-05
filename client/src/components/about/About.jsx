@@ -2,7 +2,7 @@ import { Button } from "../button/Button";
 import "./About.scss";
 export function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__container">
         <div className="about__content">
           <p className="about__subtitle">About Us</p>

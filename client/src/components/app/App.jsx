@@ -12,6 +12,7 @@ export const LocalStorageContext =createContext(null);
 
 export function App() {
   const [store, setStore]=useState(null);
+
   useEffect(()=>{
     const order = localStorage.getItem('order');
     if(order) setStore(JSON.parse(localStorage.getItem('order')));
@@ -19,12 +20,11 @@ export function App() {
 
   const updateStore =()=>setStore(JSON.parse(localStorage.getItem('order')));
   const providerValue = useMemo(()=>({store, updateStore}), [store])
-
   return (
-    <div className="App">
+    <div className="App" >
     <LocalStorageContext.Provider value={providerValue}>
     <BrowserRouter>
-        <Header />
+        <Header/>
         <main className="main">
           <Routes>
             <Route path="/" element={<HomePage />} />

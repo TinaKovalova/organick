@@ -57,7 +57,7 @@ export function Products() {
 
 
   return (
-    <section className="products">
+    <section className="products" id="shop">
       <div className="products__container" onClick={(e) => loadMore(e)}>
         <p className="products__subtitle">Categories </p>
         <h2 className="products__title">Our Products</h2>

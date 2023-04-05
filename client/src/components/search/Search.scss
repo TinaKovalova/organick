@@ -1,7 +1,7 @@
 @import '../../styles/variables', '../../styles/functions' ;
 
 .search-panel{
-    width: vw(376);
+    min-width: rem(200);
     height: rem(66);
     position: relative;
 

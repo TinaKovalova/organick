@@ -1,7 +1,7 @@
 @import '../../styles/variables', '../../styles/functions' ;
 
-.cart{
-    width: vw(159);
+.header-cart{
+    min-width: rem(130);
     height: rem(66);
     border-radius:rem(33);
     border: rem(1) solid #E0E0E0;
@@ -11,7 +11,7 @@
     &__link{
         display: flex;
         align-items: center;
-        gap: rem(12);
+       
 
     }
     &__icon{
@@ -22,8 +22,8 @@
 
     }
     &__lable{
+        margin-left: rem(12);
         font-weight: 600;
         line-height: em(21);
-
     }
 }

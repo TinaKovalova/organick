@@ -3,7 +3,7 @@ import { Button } from "../button/Button";
 import { NewsCard } from "../newsCard/NewsCard";
 export function News() {
   return (
-    <section className="news">
+    <section className="news" id="news">
       <div className="news__container">
         <div className="news__headers">
           <div className="news__titles-block">
