@@ -1,30 +1,33 @@
 import { useState, useEffect } from "react";
 
 export function ProductCardItem(props) {
-    const [quantity, setQuantity] = useState(props.quantity);
-    useEffect(()=>{    
-        props.updateOrder(id,quantity)
-    },[quantity])
+  const [quantity, setQuantity] = useState(props.quantity);
+  useEffect(() => {
+    props.updateOrder(id, quantity);
+  }, [quantity]);
 
-    const deleteProduct = () =>props.deleteOrderProduct(props.id);
-    const changeQuantity = (e)=> setQuantity(+e.target.value);
-    const{  id, imagePath, productName,discountSum,price,discountPrice} =props
-    
+  const deleteProduct = () => props.deleteOrderProduct(props.id);
+  const changeQuantity = (e) => setQuantity(+e.target.value);
+  const { id, imagePath, productName, discountSum, price, discountPrice } =
+    props;
+
   return (
     <>
-      <img
-        src={require("../../assets" +
-          (imagePath || "/product/fruit-vegetables.png"))}
+      <div
         className="cart__order-image"
-        alt=""
-      />
+        style={{
+          backgroundImage: `url(${require("../../assets" +
+            (imagePath || "/product/fruit-vegetables.png"))})`,
+        }}
+      ></div>
+
       <p className="cart__product-name">
         {productName}
         <span className={"cart__price" + (discountSum ? " discount" : "")}>
-            ${price}
+          ${price}
         </span>
         <span className="cart__discount-price">
-            {discountSum ? "$" + discountPrice : null}
+          {discountSum ? "$" + discountPrice : null}
         </span>
       </p>
       <form className="cart__order-form" onClick={(e) => e.preventDefault()}>

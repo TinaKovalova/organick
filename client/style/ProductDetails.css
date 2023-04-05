@@ -211,12 +211,21 @@
   }
   .details__container {
     width: 80%;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 0;
     padding-right: 0;
   }
   .details .main-content__close-btn {
     right: 1.5625vw;
+  }
+}
+@media (max-width: 500px) {
+  .details .main-content__form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .details .main-content__close-btn {
+    right: 9.375vw;
   }
 }

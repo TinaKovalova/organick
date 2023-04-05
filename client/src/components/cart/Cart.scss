@@ -1,7 +1,7 @@
 @import '../../styles/variables', '../../styles/functions' ;
 
 .header-cart{
-    min-width: rem(130);
+    min-width: rem(145);
     height: rem(66);
     border-radius:rem(33);
     border: rem(1) solid #E0E0E0;
@@ -16,7 +16,7 @@
     }
     &__icon{
         border-radius: 50%;
-        width: rem(56);
+        min-width: rem(56);
         height: rem(56);
         background: $main-text-color url('../../assets/header/cart-icon.svg')45% no-repeat;
 

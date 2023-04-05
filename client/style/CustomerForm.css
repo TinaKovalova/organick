@@ -24,18 +24,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3.125rem;
+  gap: 2.6041666667vw;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.3125rem;
-  width: 74rem;
-  margin: 6.5rem 5.375rem 2.375rem 8.125rem;
+  width: 61.6666666667vw;
 }
 .customer-form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.875rem;
+  gap: 2.3958333333vw;
 }
 .customer-form__row-item {
   display: -webkit-box;
@@ -45,13 +44,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 1.625rem;
+  row-gap: 1.3541666667vw;
   width: 48.0574324324%;
 }
 .customer-form__field {
-  border-radius: 1rem;
+  border-radius: 0.8333333333vw;
   border: 1px solid #7eb693;
-  padding: 1.75rem 1.4375rem 1.9375rem;
+  padding: 1.4583333333vw 1.1979166667vw 1.6145833333vw;
 }
 .customer-form__field:focus:not(:-moz-placeholder-shown) {
   box-shadow: #7eb693 0px 2px 5px 0px;
@@ -111,7 +110,16 @@
   color: #ababab;
 }
 .customer-form .message-field {
-  margin-top: 1.625rem;
+  margin-top: 1.3541666667vw;
   width: 100%;
-  min-height: 15.4375rem;
+  min-height: 12.8645833333vw;
+}
+@media (max-width: 767.98px) {
+  .customer-form__row-item {
+    width: 100%;
+  }
+  .customer-form__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }

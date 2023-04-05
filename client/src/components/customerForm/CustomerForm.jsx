@@ -68,7 +68,7 @@ export function CustomerForm(props){
                     type="text"
                     name="address"
                     className="customer-form__field"
-                    placeholder="our company address"
+                    placeholder="Our company address"
                     pattern="^(\w{3,})\s(\w+)\s(\d+)$"//city street Name, homeNumber
                     required
                     value={address}

@@ -11,26 +11,26 @@
 
   &__title-block {
     width: 100%;
-    height: rem(450);
+    height: vw(450);
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #e3f1e9;
     background: url("../../../assets/cart/Pattern.svg") center/cover no-repeat,
-      url("../../../assets/cart/bg-fruit.png") 100% center/cover no-repeat;
+      url("../../../assets/cart/bg-fruit.png") center/cover no-repeat;
   }
   &__title {
-    padding-left: rem(20);
+    padding-left: vw(20);
     @include titleStyle(800, 70, 82);
   }
   &__main-block {
-    margin-top: rem(141);
+    margin-top: vw(141);
     width: 100%;
     background-color: rgba(253, 176, 45, 0.16);
   }
   &__container {
     @include main-container();
-    padding: rem(149) 0 rem(59);
+    padding: vw(149) 0 vw(59);
   }
   &__order {
     display: flex;
@@ -40,31 +40,41 @@
   }
   &__order-item {
     width: 100%;
-    min-height: rem(226);
+    // min-height: vw(226);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: rem(72);
+    justify-content: space-between;
+    gap:vw(15);
   }
   &__order-image {
     display: block;
     border-radius: rem(30);
-    width: rem(292);
-    height: rem(226);
-    background-color: #f9f8f8;
-    mix-blend-mode: multiply;
-    object-fit: cover;
-    object-position: center;
+    width: vw(292);
+    height: vw(226);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(253, 176, 45, 0.16);
+    background-blend-mode: multiply;
+    background-color: rgba(253, 176, 45, 0.16);
   }
   &__product-name {
     @include titleStyle(700, 40, 46);
+    @extend %title-text-style;
+    font-size:clamp(1.5rem, vw(40), 2.5rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    & span{
+      margin-left: vw(10);
+    }
   }
-  &__values {
-  }
+  
 
   &__price.discount {
     font-weight: 600;
-    font-size: rem(24);
-    line-height: rem(28);
+    font-size:clamp(1rem, vw(24), 1.5rem);
+    line-height: 1.2em;
     color: #b8b8b8;
     text-decoration: line-through;
   }
@@ -73,67 +83,97 @@
   }
 
   &__order-form {
-    @include titleStyle(700, 32, 38);
-    width: rem(295);
+    @extend %title-text-style;
+    font-size:clamp(0.8rem, vw(32), 2.5rem);
+    font-weight: 700;
+    line-height: 1.2em;
+
+    flex: 1 1 vw(295);
+    min-width: rem(150);
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     margin-left: auto;
-    gap: rem(22);
+    gap: vw(22);
     position: relative;
   }
   &__lable {
     display: inline-block;
-    width: rem(139);
+    width: vw(139);
+    min-width: rem(70);
   }
   &__field {
     display: inline-block;
     vertical-align: bottom;
     text-align: center;
     font-weight: 700;
-    width: rem(134);
-    height: rem(80);
-    border-radius: rem(16);
+    width: vw(134);
+    height: vw(80);
+    border-radius: vw(16);
     color: $main-text-color;
     border: 2px solid $main-text-color;
     background-color: #ffffff;
   }
   &__close-btn {
-    width: rem(64);
-    height: rem(46);
+    width: vw(64);
+    min-width: rem(37);
+    height: vw(46);
+    min-height: rem(27);
     @include titleStyle(700, 20, 23);
     color: #ffffff;
     background-color: $main-text-color;
     position: absolute;
-    top: rem(17);
-    right: rem(-97);
-    border-radius: rem(16);
+    top: 20%;
+    right: vw(-97);
+    border-radius: vw(16);
     text-align: center;
     vertical-align: bottom;
   }
   &__total-block {
-    margin-top: rem(55);
-    min-width: rem(278);
+    margin-top: vw(55);
+    min-width: vw(278);
     align-self: flex-end;
-    @include titleStyle(700, 40, 47);
+    @extend %title-text-style;
+    font-size:clamp(1.5rem, vw(40), 2.5rem);
+    font-weight: 700;
+    line-height: 0.7em;
     .sum {
       display: block;
       float: right;
     }
+    & span{
+      margin-left: vw(25);
+    }
   }
 
   &__total-diacount {
-    margin-top: rem(32);
+    margin-top: vw(32);
   }
 
   &__customer-form {
+    padding: vw(104) vw(86) vw(38) vw(130);
   }
 
 
   &__btn {
-    margin-top: rem(76);
+    margin-top: vw(76);
     align-self: center;
   }
   
-
+  @include tablet() {
+    &__order-image{
+      display: none;
+    }
+    &__close-btn{
+      top: 0;
+      right: vw(-137);
+    }
+  }
+@media (max-width:600px){
+    &__close-btn{
+      top: -5%;
+      right: vw(-207);
+    }
+  }
 
 }

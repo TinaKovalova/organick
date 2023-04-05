@@ -159,13 +159,22 @@
     padding-right: rem(10);
     &__container {
       width: 80%;
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: auto;
+      margin-right: auto;
       padding-left: 0;
       padding-right: 0;
     }
+    
     .main-content__close-btn {
       right: vw(30);
+    }
+  }
+  @media (max-width:500px){
+    .main-content__form{
+      flex-wrap: wrap;
+    }
+    .main-content__close-btn {
+      right: vw(180);
     }
   }
 }

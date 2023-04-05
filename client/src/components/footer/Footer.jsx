@@ -79,8 +79,8 @@ export function Footer() {
         </div>
       </div>
       <p className="footer__copyright">
-        Copyright ©<span className="bold-text">Organick</span>| Designed by{" "}
-        <span className="bold-text">VictorFlow</span>
+        Copyright ©<span className="bold-text">Organick</span>| Designed by
+        <span className="bold-text"> VictorFlow</span>
         Templates - Powered by <span className="bold-text">Webflow</span>
       </p>
     </footer>
