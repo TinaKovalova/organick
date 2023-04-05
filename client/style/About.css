@@ -38,11 +38,12 @@
   width: 100%;
   min-height: 66.6875rem;
   background-color: #f9f8f8;
-  background-image: url("../../assets/about/fruts.svg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url("../../assets/about/fruts.svg");
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../../assets/about/fruts.svg");
   background-position: top 5.4375rem left 6.25rem;
   background-repeat: no-repeat;
   background-size: 48% 81%;
-  padding: 11.625rem 12.4375rem 0;
+  padding: 11.625rem 0 12.4375rem;
 }
 .about__container {
   width: 75vw;
@@ -51,13 +52,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
 }
 .about__content {
-  width: 36.5625vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 36.5625vw;
+          flex: 0 1 36.5625vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 0.875rem;
+  margin-left: auto;
 }
 .about__subtitle {
   font-size: 2.25rem;
@@ -68,6 +78,12 @@
   font-size: 3.125rem;
   font-weight: 800;
   line-height: 3.6875rem;
+  width: 36.5625vw;
+  min-width: 28.125rem;
+}
+.about__text {
+  width: 36.5625vw;
+  min-width: 25rem;
 }
 .about__list {
   margin-top: 2.875rem;
@@ -86,7 +102,8 @@
 .about__item-content {
   display: inline-block;
   vertical-align: top;
-  width: 27.75rem;
+  width: 23.125vw;
+  min-width: 21.875rem;
 }
 .about__item-title {
   font-weight: 800;
@@ -95,4 +112,19 @@
 }
 .about__item-text {
   margin-top: 0.4375rem;
+}
+@media (max-width: 1230px) {
+  .about {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+  }
+}
+@media (max-width: 991.98px) {
+  .about {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.8))), url("../../assets/about/fruts.svg");
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8)), url("../../assets/about/fruts.svg");
+    background-repeat: no-repeat;
+  }
 }

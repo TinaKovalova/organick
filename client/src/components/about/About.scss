@@ -4,26 +4,36 @@
   width: 100%;
   min-height: rem(1067);
   background-color: $white-smoke;
-  background-image: url("../../assets/about/fruts.svg");
+  background:  linear-gradient( rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) ), url("../../assets/about/fruts.svg");
   background-position: top rem(87) left rem(100);
   background-repeat: no-repeat;
   background-size: 48% 81%;
-  padding: rem(186) rem(199) 0;
+  padding: rem(186) 0 rem(199) ;
   &__container {
     @include main-container();
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
   }
   &__content {
-    width: vw(702);
+    flex: 0 1 vw(702);
+    display: flex;
+    flex-direction: column;
     margin-top: rem(14);
+    margin-left: auto;
     @extend %main-text-style;
   }
   &__subtitle {
     @include subtitleStyle();
+
   }
   &__title {
     @include titleStyle();
+     width: vw(702);
+     min-width: rem(450);
+  }
+  &__text{
+    width: vw(702);
+    min-width: rem(400);
   }
 
   &__list {
@@ -44,7 +54,8 @@
   &__item-content {
     display: inline-block;
     vertical-align: top;
-    width: rem(444);
+    width: vw(444);
+    min-width: rem(350);
   }
   &__item-title {
     @extend %title-text-style;
@@ -54,5 +65,18 @@
   }
   &__item-text {
     margin-top: rem(7);
+    
   }
+  @media (max-width: 1230px){
+    transition:all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode:lighten;
+  }
+
+    @include laptop() {
+      background:  linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8) ), url("../../assets/about/fruts.svg");
+      background-repeat: no-repeat;
+ 
+    }
+
 }
