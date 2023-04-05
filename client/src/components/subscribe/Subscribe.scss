@@ -8,6 +8,8 @@
     padding: rem(71) rem(105);
     min-height: rem(323);
     display: flex;
+    flex-wrap: wrap;
+    gap: rem(30);
     align-items: center;
     justify-content: space-between;
     border-radius: rem(30);
@@ -15,11 +17,14 @@
     background: url("../../assets/subscribe/fresh.png") center/cover;
   }
   &__title {
-    @extend %title-text-style;
-    font-weight: 800;
-    font-size: rem(50);
-    line-height: rem(59);
-    max-width: percent(357, $container-width - 142);
+    flex: 0 1 rem(357);
+    @include titleStyle();
+    // max-width: percent(357, $container-width - 142);
     color: #ffffff;
+  }
+  @media (max-width:600px){
+    &__container{
+      padding: rem(35) rem(35);
+    }
   }
 }

@@ -2,12 +2,14 @@
 .news{
     width: 100%;
     min-height: rem(1176);
-    padding: rem(177) rem(253) 0;
+    padding: rem(177) 0 rem(253) ;
     &__container{
         @include main-container();
     }
     &__headers{
         display: flex;
+        flex-wrap: wrap;
+        gap: rem(30);
         align-items: flex-end;
         justify-content: space-between;
 
@@ -36,9 +38,16 @@
     &__content{
         margin-top: rem(48);
         display: flex;
-        gap: rem(40);
-        justify-content: space-between;
+       
+        gap:  rem(100) rem(40);
+        justify-content: center;
 
+    }
+     
+    @media (max-width: 1230px) {
+        &__content {
+            flex-wrap: wrap;
+        }
     }
 
 }

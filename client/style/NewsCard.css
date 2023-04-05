@@ -25,7 +25,10 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .news-card {
-  width: 35.2604166667vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 42.3125rem;
+          flex: 0 1 42.3125rem;
+  min-width: 22.3958333333vw;
   min-height: 32.75rem;
   border-radius: 1.875rem;
   position: relative;

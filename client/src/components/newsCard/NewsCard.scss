@@ -1,7 +1,8 @@
 @import "../../styles/variables", "../../styles/functions";
 
 .news-card {
-  width: vw(677);
+  flex: 0 1 rem(677);
+  min-width: vw(430);
   min-height: rem(524);
   border-radius: rem(30);
   position: relative;

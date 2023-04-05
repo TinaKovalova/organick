@@ -1,11 +1,11 @@
 @import "../../styles/variables", "../../styles/functions";
 
 .subscribeForm {
-  width: rem(577);
+  flex: 0 1 rem(577);
   display: flex;
   gap: rem(8);
   &__field {
-    flex: 1 0 auto;
+    flex: 1 1 rem(349);
     border-radius: rem(16);
     background-color: #ffffff;
     line-height: rem(21);
@@ -16,6 +16,13 @@
     padding: rem(28) rem(31) rem(23);
     color: #ababab;
   }
-  &__btn {
+ 
+  @include laptop() {
+    flex-wrap: wrap;
+    justify-content: center;
+    &__btn {
+      width: 100%;
+    }
   }
+  
 }

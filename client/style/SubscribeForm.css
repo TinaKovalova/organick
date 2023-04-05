@@ -7,7 +7,9 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .subscribeForm {
-  width: 36.0625rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 36.0625rem;
+          flex: 0 1 36.0625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,8 +17,8 @@
 }
 .subscribeForm__field {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 1 21.8125rem;
+          flex: 1 1 21.8125rem;
   border-radius: 1rem;
   background-color: #ffffff;
   line-height: 1.3125rem;
@@ -26,4 +28,16 @@
   border: none;
   padding: 1.75rem 1.9375rem 1.4375rem;
   color: #ababab;
+}
+@media (max-width: 991.98px) {
+  .subscribeForm {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subscribeForm__btn {
+    width: 100%;
+  }
 }
