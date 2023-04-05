@@ -12,6 +12,7 @@
   font-weight: 600;
   @extend %main-text-style;
   background-color: $white-smoke;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;

@@ -10,7 +10,6 @@ export function Header() {
   const handleBurger = (e)=>{
     e.target.classList.toggle('active');
     document.querySelector('.header__navigation').classList.toggle('active')
-    // document.querySelector('.main').classList.toggle('lock');
   }
   return (
     <header className="header">

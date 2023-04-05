@@ -3,7 +3,10 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 export function Navigation(props) {
 
-  const hanleNavigation= ()=> document.querySelector('.header__navigation').classList.toggle('active');
+  const hanleNavigation= ()=> {
+    document.querySelector('.header__navigation').classList.remove('active');
+    document.querySelector('.burger-icon').classList.remove('active');
+  }
   return (
     <nav className={(props.className || "") + " navigation"}>
       <ul className="navigation__list" onClick={hanleNavigation}>
