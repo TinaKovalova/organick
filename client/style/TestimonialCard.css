@@ -25,7 +25,9 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .testimonial-card {
-  width: 48.75rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40.625vw;
+          flex: 0 1 40.625vw;
   min-height: 21.75rem;
   display: -webkit-box;
   display: -ms-flexbox;

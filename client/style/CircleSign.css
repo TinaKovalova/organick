@@ -1,13 +1,4 @@
-.circle-sign__product, .circle-sign__amount {
-  font-family: "Roboto", sans-serif;
-  color: #274c5b;
-}
-
-/*>=992 Desktop, large screens*/
-/*>=768 Small screens, laptop*/
-/*>=480 Ipads, Tablets*/
-/*<=480 mobile*/
-.circle-sign__product, .circle-sign__amount {
+.circle-sign {
   font-family: "Roboto", sans-serif;
   color: #274c5b;
 }
@@ -17,8 +8,19 @@
 /*>=480 Ipads, Tablets*/
 /*<=480 mobile*/
 .circle-sign {
-  width: 11.8125rem;
-  height: 11.8125rem;
+  font-family: "Roboto", sans-serif;
+  color: #274c5b;
+}
+
+/*>=992 Desktop, large screens*/
+/*>=768 Small screens, laptop*/
+/*>=480 Ipads, Tablets*/
+/*<=480 mobile*/
+.circle-sign {
+  width: 9.84375vw;
+  min-width: 7.5rem;
+  height: 9.84375vw;
+  min-height: 7.5rem;
   border-radius: 50%;
   background-color: #F1F1F1;
   display: -webkit-box;
@@ -48,12 +50,13 @@
   left: -5%;
 }
 .circle-sign__amount {
-  font-size: 3.125rem;
   font-weight: 800;
-  line-height: 3.6875rem;
+  font-size: clamp(1.8rem, 2.6041666667vw, 3.125rem);
+  line-height: 1.18em;
 }
 .circle-sign__product {
-  font-size: 1.125rem;
+  text-transform: capitalize;
   font-weight: 600;
-  line-height: 1.875rem;
+  font-size: clamp(0.8rem, 0.9375vw, 1.12rem);
+  line-height: 1.66em;
 }

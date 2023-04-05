@@ -1,14 +1,17 @@
 @import "../../styles/variables", "../../styles/functions";
 
 .circle-sign{
-    width: rem(189);
-    height: rem(189);
+    width: vw(189);
+    min-width: rem(120);
+    height: vw(189);
+    min-height: rem(120);
     border-radius: 50%;
     background-color: #F1F1F1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @extend %title-text-style;
 
     position: relative;
     &::after{
@@ -24,10 +27,15 @@
     }
 
     &__amount{
-        @include titleStyle();
-        
+        font-weight: 800;
+        font-size:clamp(1.8rem, vw(50), 3.125rem);
+        line-height:1.18em;
     }
     &__product{
-        @include titleStyle(600, 18,30);
+        
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size:clamp(0.8rem, vw(18), 1.12rem);
+        line-height:1.66em;
     }
 }

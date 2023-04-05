@@ -7,13 +7,17 @@
     center/cover;
   &__container {
     @include main-container();
-    padding: 0 rem(156);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   &__subtitle {
     @include subtitleStyle();
+    
+  }
+  &__subtitle, &__title{
+    text-transform: capitalize;
+    text-align: center;
   }
   &__title {
     margin-top: rem(8);
@@ -29,8 +33,8 @@
     width: 100%;
     padding: rem(102) 0 rem(39);
     display: flex;
-    justify-content: center;
-    gap: vw(62);
+    justify-content: space-around;
+    gap: rem(15);
     position: relative;
     &::before {
       content: "";
@@ -41,5 +45,12 @@
       top: 0;
       left: 0;
     }
+  }
+  @include laptop(){
+
+     &__stat{
+      flex-wrap: wrap;
+      justify-content: center;
+     } 
   }
 }
