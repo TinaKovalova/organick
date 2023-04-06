@@ -8,6 +8,11 @@
   border: rem(2) solid transparent;
   font-weight: 700;
   @extend %title-text-style;
+  transition: transform 0.3s;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
   &__icon {
     margin-left: rem(10);
   }
@@ -15,6 +20,7 @@
     width: rem(320);
     min-height: rem(96);
   }
+  
 }
 .bright-btn.btn {
   background-color: $yellow-btn;

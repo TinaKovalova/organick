@@ -59,6 +59,11 @@
       border-radius: rem(16);
       text-align: center;
       vertical-align: bottom;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
     }
     &__title {
       @include titleStyle(600, 40, 47);
@@ -135,6 +140,11 @@
     font-weight: 700;
     font-size: rem(25);
     line-height: rem(34);
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
   }
   .active-btn {
     background-color: $main-text-color;

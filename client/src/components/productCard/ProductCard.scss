@@ -16,6 +16,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;
+  transition: transform 0.3s;
+  &:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
   &__category {
     width: fit-content;
     min-height: rem(31);

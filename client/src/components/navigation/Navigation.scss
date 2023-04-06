@@ -8,14 +8,20 @@
   font-weight: 700;
   font-size: rem(20);
   line-height: 1em;
+  
   &__list {
     list-style: none;
     display: flex;
   }
   &__item:nth-child(n + 2) {
     margin-left: vw(42);
+    
   }
   &__item {
     text-transform: capitalize;
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }

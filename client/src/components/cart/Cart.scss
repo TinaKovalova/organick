@@ -7,6 +7,10 @@
   border: rem(1) solid #e0e0e0;
   padding: rem(4) rem(5);
   color: $main-text-color;
+  transition: all 0.3s;
+    &:hover{
+      transform: scale(1.05);
+    }
 
   &__link {
     display: flex;
