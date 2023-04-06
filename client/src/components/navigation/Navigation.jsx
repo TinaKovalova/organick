@@ -17,7 +17,7 @@ export function Navigation(props) {
           <Link to="/#about" smooth>About</Link>
         </li>
         <li className="navigation__item">
-          <Link to="/" smooth>Pages</Link>
+          <Link to="/*" smooth>Pages</Link>
         </li>
         <li className="navigation__item">
           <Link to="/#shop" smooth>Shop</Link>

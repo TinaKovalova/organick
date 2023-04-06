@@ -79,5 +79,17 @@
       ),
       url("../../assets/about/fruts.svg");
     background-repeat: no-repeat;
+    &__content {
+      width: 100%;
+      margin-left: auto;
+    }
+  }
+  @include tablet(){
+    &__container {
+      width: 100vw;
+    }
+    &__title{
+      font-size:rem(40) ;
+    }
   }
 }

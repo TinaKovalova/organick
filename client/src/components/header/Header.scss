@@ -5,7 +5,7 @@
   @extend %title-text-style;
   width: 100%;
   min-height: vw(204);
-  padding: vw(75) percent($header-padding-lr, $max-width);
+  padding: 0 percent($header-padding-lr, $max-width);
   background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;

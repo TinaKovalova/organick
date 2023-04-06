@@ -22,7 +22,7 @@ export function CustomerForm(props){
   
     const checkFormValidation =(e)=>{
       const{name,value}=e.target;
-      setState[name](value)
+      if(name in setState)  setState[name](value);
     }
 
     return(

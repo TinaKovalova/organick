@@ -67,6 +67,7 @@
     }
     &__title {
       @include titleStyle(600, 40, 47);
+      text-transform: capitalize;
     }
     &__rating {
       height: rem(19);
@@ -97,7 +98,7 @@
     &__form {
       @include titleStyle(700, 20, 23);
       margin-top: rem(27);
-      width: rem(476);
+      width: auto;
       display: flex;
       align-items: center;
       gap: rem(20);
@@ -185,6 +186,9 @@
     }
     .main-content__close-btn {
       right: vw(180);
+    }
+    &__form{
+      flex-wrap: wrap;
     }
   }
 }

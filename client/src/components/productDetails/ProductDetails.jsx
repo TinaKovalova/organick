@@ -104,7 +104,7 @@ export function ProductDetails(props) {
                 value={quantity}
                 onChange={changeQuantity}
               />
-              <Button  className={"dark-btn" + (isInCart? " yellow-btn":"")} text="Add To Car" icon />
+              <Button  className={"dark-btn" + (isInCart? " yellow-btn":"")} text="Add To Cart" icon />
             </form>
           </div>
         </div>

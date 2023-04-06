@@ -60,7 +60,7 @@
     background-color: rgba(253, 176, 45, 0.16);
   }
   &__product-name {
-    @include titleStyle(700, 40, 46);
+    text-transform: capitalize;
     @extend %title-text-style;
     font-size: clamp(1.5rem, vw(40), 2.5rem);
     font-weight: 700;

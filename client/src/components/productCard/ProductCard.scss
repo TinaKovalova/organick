@@ -41,6 +41,7 @@
   }
   &__name {
     @extend %title-text-style;
+    text-transform: capitalize;
     font-size: rem(20);
     line-height: rem(23);
   }
