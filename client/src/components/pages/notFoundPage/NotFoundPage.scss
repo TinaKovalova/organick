@@ -36,7 +36,7 @@
   &__title {
     @extend %title-text-style;
     font-weight: 800;
-    font-size: clamp(2rem, vw(70), 5rem);
+    font-size: clamp(2rem, vw(70), 4.37rem);
     line-height: 1.2em;
     text-align: center;
     &::first-letter {
@@ -45,7 +45,7 @@
   }
   &__text {
     @extend %main-text-style;
-    font-size: clamp(1rem, vw(18), 1.2rem);
+    font-size: clamp(1rem, vw(18), 1.12rem);
     line-height: 1.66em;
     font-weight: 600;
     text-align: center;
