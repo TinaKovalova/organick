@@ -29,9 +29,8 @@ export function ProductDetails(props) {
   useEffect(()=>{
     const currentProduct = findProductInStore(id)
     setQuantity(currentProduct?.quantity || 1);
-    setIsInCart(currentProduct? true :false)
-    
-  },[id])
+    setIsInCart(currentProduct? true :false);
+  })
  
   const addProduct = (e) => {
     e.preventDefault();
